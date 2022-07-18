@@ -1,6 +1,15 @@
 import {useState, useEffect} from 'react';
-import Header from './components/header';
+import React from "react";
 import Home from './pages/home';
+import Feed from './pages/feed';
+import Search from './pages/search';
+import About from './pages/about';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 import './App.css';
 
@@ -26,13 +35,14 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Header/>
-      <Home/>
-
-      {/* <h1>{data.name}</h1>
-      <h2>{data.id}</h2> */}
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="feed" element={<Feed />} />
+      <Route path="search" element={<Search />} />
+      <Route path="about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 

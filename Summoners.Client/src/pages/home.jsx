@@ -2,12 +2,12 @@ import React from 'react'
 import '../styles/home.css'
 import { useState, useEffect } from "react";
 
+import Header from '../components/header';
+
 import {
     bg1,
     sliderData
 } from '../components/images'
-
-// const champImgs = [champGaren]
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,11 +20,6 @@ const Home = () => {
     const nextSlide = () => {
       setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
       console.log("next");
-    };
-  
-    const prevSlide = () => {
-      setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
-      console.log("prev");
     };
   
     function auto() {
@@ -43,15 +38,15 @@ const Home = () => {
     }, [currentSlide]);
 
     return (
+      <>
+      <Header/>
         <div className='background-image' style={{ backgroundImage: `url(${bg1})` }}>
-
-        <div className="welcome__info">
-                <div className="welcome__info__content">
+                <div className="welcome__content">
                     <div className="welcome__title">
                         <span>Welcome To</span>
                         <h2 className="title__name">Summoners</h2>
                     </div>
-                    <div className="description m-t-4">
+                    <div className="description">
                         Team up with friends and test your skills in League of Legends combat. Then dive into the community of gamers, cosplayers, musicians, and content creators who are waiting for you to join them.
                     </div>
                     <div className="btns">
@@ -66,16 +61,17 @@ const Home = () => {
           <div
             className={index === currentSlide ? "slide current" : "slide"}
             key={index}
-          >
+            >
             {index === currentSlide && (
               <div className="welcome__img__slide">
-                  <div className='image'>
-                <img src={slide.image} alt="slide" />
-                </div>
+                 
                 <div className="welcome__img__content">
                   <h2>{slide.heading}</h2>
-                  <p>{slide.desc}</p>
+                  {/* <p>{slide.desc}</p> */}
                   <hr />
+                </div>
+                <div className='image'>
+                <img src={slide.image} alt="slide" />
                 </div>
              
               </div>
@@ -84,11 +80,10 @@ const Home = () => {
         );
       })}
 
-
-                </div>
+      </div>
     </div>
-    </div>
+    </>
     )
-}
-
-export default Home
+  }
+  
+  export default Home
