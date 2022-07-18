@@ -61,7 +61,6 @@ const Home = () => {
                 </div>
             
             <div className="welcome__img">
-            <div className="welcome__img__slide">
       {sliderData.map((slide, index) => {
         return (
           <div
@@ -69,13 +68,16 @@ const Home = () => {
             key={index}
           >
             {index === currentSlide && (
-              <div>
+              <div className="welcome__img__slide">
+                  <div className='image'>
+                <img src={slide.image} alt="slide" />
+                </div>
                 <div className="welcome__img__content">
-                  <h3>{slide.heading}</h3>
+                  <h2>{slide.heading}</h2>
                   <p>{slide.desc}</p>
                   <hr />
                 </div>
-                <img src={slide.image} alt="slide" className="image" />
+             
               </div>
             )}
           </div>
@@ -84,7 +86,6 @@ const Home = () => {
 
 
                 </div>
-            </div>
     </div>
     </div>
     )

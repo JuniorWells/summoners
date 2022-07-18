@@ -72,24 +72,27 @@
 .welcome__img {
     align-self: center;
     display: flex;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-right: 40px;
     margin-top: 40px;
     width: 100%;
 }
 
 .welcome__img__slide {
-    display: grid;
-    grid-column: 1;
+display: flex;
 }
 
 .welcome__img__slide img{
-    height: 420px;
-    width: 380px;
+    height: 550px;
+    width: 500px;
 
 }
 
-.welcome__img__content h3{
+.welcome__img__content{
+    align-self: center;
+}
+
+.welcome__img__content h2{
 font-family: monospace;
 }
 
