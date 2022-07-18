@@ -1,0 +1,101 @@
+.background-image{
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:100vh;
+    width: fit-content;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.7);
+    
+}
+
+.welcome__info {
+    display: flex;
+    align-items: flex-start;
+    color: aliceblue;
+    
+    height: 100%;
+}
+
+.welcome__info__content {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    justify-content: center;
+    width: 50%;
+}
+
+.welcome__title {
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+.title__name{
+    font-size: 4rem;
+    font-family:fantasy;
+}
+
+.description {
+    font-size: 1rem;
+    font-family:sans-serif;
+}
+
+.btns {
+    margin-top: 20%;
+}
+.btn-main {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: beige;
+    background-color: brown;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+}
+
+.btn-second {
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: beige;
+    background-color: rgb(244, 183, 70);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    margin-top: 5%;
+}
+
+.welcome__img {
+    align-self: center;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.welcome__img__slide {
+    display: grid;
+    grid-column: 1;
+}
+
+.welcome__img__slide img{
+    height: 420px;
+    width: 380px;
+
+}
+
+.welcome__img__content h3{
+font-family: monospace;
+}
+
+.welcome__img__content p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+            
+              

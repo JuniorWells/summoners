@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/header.css';
 
-import { logo } from '../assets/images';
+import { logo } from './images';
 
 const Header = () => {
     return (
