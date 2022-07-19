@@ -2,7 +2,6 @@ import logo from '../assets/images/logo.png';
 import bg1 from '../assets/images/bg-1.jpg';
 import bg2 from '../assets/images/bg-2.jpg';
 import bg3 from '../assets/images/bg-3.jpg';
-import swords from '../assets/images/two-sword.png'
 import Ashe from '../assets/images/Champion_ashe_HP.png'
 import Ahri from '../assets/images/Champion_Ahri_HP.png'
 import Garen from '../assets/images/Champion_garen_HP.png'
@@ -10,11 +9,6 @@ import akali from '../assets/images/akali_card.png'
 import lux from '../assets/images/lux_card.png'
 
 export const sliderData = [
-    {
-        image: swords,
-        heading: "Trending Champions on Summoners",
-        desc: "",
-      },
       {
         image: akali,
         heading: "THE ROGUE ASSASSIN",
