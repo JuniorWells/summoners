@@ -8,7 +8,7 @@ function App() {
 
   const getSummoner = async (query) => {
     const response = await fetch(
-      `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=RGAPI-6cd10833-4226-40ad-8bba-37d86a74d518`);
+      `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=RGAPI-f97de2dd-d6d4-4a9e-9815-8870413145f4`);
     const deserializedJSON = await response.json();
     setData(deserializedJSON);
   }
