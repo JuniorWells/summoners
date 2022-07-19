@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/home.css'
 import { useState, useEffect } from "react";
+import SearchBar from '../components/searchBar';
 
 import Header from '../components/header';
 
@@ -19,7 +20,6 @@ const Home = () => {
   
     const nextSlide = () => {
       setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-      console.log("next");
     };
   
     function auto() {
@@ -49,10 +49,13 @@ const Home = () => {
                     <div className="description">
                         Team up with friends and test your skills in League of Legends combat. Then dive into the community of gamers, cosplayers, musicians, and content creators who are waiting for you to join them.
                     </div>
-                    <div className="btns">
-                        <button className="btn-main"> SIGN UP</button>
-                        <button className="btn-second"> SIGN IN</button>
+                    <div>
+
+                        <SearchBar />
                     </div>
+                    {/* <div className="btns">
+                        <button className="btn-main">SIGN IN RIOT ID</button>
+                    </div> */}
                 </div>
             
             <div className="welcome__img">

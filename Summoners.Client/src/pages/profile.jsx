@@ -3,8 +3,11 @@ import '../styles/search.css';
 import {
   bg2
 } from '../components/images'
+import SearchBar from '../components/searchBar';
 
-export default function Search() {
+
+export default function Profile() {
+   
     return (
       <>
         <Header/>
@@ -13,6 +16,7 @@ export default function Search() {
             <h2 className='search__contents'>
               This is our Search Page
             </h2>
+            <SearchBar/>
           </div>
         </div>
       </>
