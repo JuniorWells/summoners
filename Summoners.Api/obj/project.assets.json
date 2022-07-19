@@ -9630,11 +9630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj",
+      "projectUniqueName": "/Users/saltdev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj",
       "projectName": "Summoners.Api",
-      "projectPath": "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj",
+      "projectPath": "/Users/saltdev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj",
       "packagesPath": "/Users/saltdev/.nuget/packages/",
-      "outputPath": "/Users/saltdev/salt/summoners/Summoners.Api/obj/",
+      "outputPath": "/Users/saltdev/Desktop/summoners/Summoners.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/saltdev/.nuget/NuGet/NuGet.Config"
