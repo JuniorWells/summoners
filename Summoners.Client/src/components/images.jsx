@@ -7,6 +7,7 @@ import Ahri from '../assets/images/Champion_Ahri_HP.png'
 import Garen from '../assets/images/Champion_garen_HP.png'
 import akali from '../assets/images/akali_card.png'
 import lux from '../assets/images/lux_card.png'
+import ornn from '../assets/images/Ornn.png'
 
 export const sliderData = [
       {
@@ -34,6 +35,9 @@ export const sliderData = [
       heading: "THE LADY OF LUMINOSITY",
       desc: "Ahri hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve her family's noble status",
     },
+    {
+      image: ornn
+    }
   ];
 
 export {
