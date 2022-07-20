@@ -20,21 +20,21 @@
 .home-search{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    margin-left: 8rem;
 }
 .welcome__content {
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
     justify-content: center;
-    width: 60%;
-    height: 300px;
+    width: 80%;
+    height: 250px;
 }
 
 .welcome__title {
-    font-size: 1.5rem;
-    height: 180px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     font-family: monospace;
@@ -42,21 +42,20 @@
 
 .title__name{
     font-size: 4rem;
-    font-family:fantasy;
+    font-family:sans-serif;
     margin-top: 30px;
 }
 
-.description {
+.title__description {
     font-size: 1rem;
     font-family:sans-serif;
     height: 100px;
 }
 
 .welcome__img {
-    align-self: center;
     display: flex;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 8rem;
     margin-top: 2rem;
     width: 40%;
     height: 550px;
@@ -89,9 +88,11 @@ flex-direction: column;
     width: 60%;
     margin-left: 4rem;
 }
+.searchBar__wrap{
+    margin-left: 4rem;
+}
 .welcome__img{
-    align-items: center;
-    justify-content: center;
+    align-self: center;
 }
 .welcome__img__slide img{
     height: 400px;

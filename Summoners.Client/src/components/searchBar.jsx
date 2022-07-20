@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SearchBar = () => {
         
     const [value, setValue] = useState('');
-    const apiKey = 'RGAPI-f97de2dd-d6d4-4a9e-9815-8870413145f4';
+    const apiKey = 'RGAPI-a2457617-1432-4540-b46a-4cc0c9a00f6e';
 
     const formSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +26,6 @@ const SearchBar = () => {
 
     return (
         <div className='searchBar__wrap'>
-            <h3>Enter Summoner's Name</h3>
             <form onSubmit={formSubmit}>
             <input
                 type='text'
