@@ -4,7 +4,8 @@
 
 const getSummonerId = async (query, apiKey) => {
     const response = await fetch(
-        `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${apiKey}`);
+        `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${apiKey}`
+    );
     const deserializedJSON = await response.json();
     return deserializedJSON.id;
 }
