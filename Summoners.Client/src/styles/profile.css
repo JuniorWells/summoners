@@ -1,0 +1,21 @@
+
+.profile-wrapper{
+    height: 100vh;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.7);
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    color: white;
+
+}
+
+.profile__search{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20rem;
+}
+
