@@ -9,20 +9,25 @@ const Card = ( { data }) => {
 // 6. Losses
 // 7. Win ratio 
 
-    
-        // || data.queueType !== 'RANKED_SOLO_5X5'
-        let temp = '';
-        if (data === null || data.length === 0 || data === undefined )
+    let index = 0;
+    for (let i = 0; i < data.length; i++)
+    {
+        if (data[i].queueType === "RANKED_SOLO_5x5")
         {
-            temp = 'mykonos';
-        }   
-        else {
-            temp = data[0].tier;
+            index = i;
         }
+    }
+
 
     return (
         <div>
-            <h1>{temp}</h1>
+            <h1>{data[index].summonerName}</h1>
+            <h1>{data[index].tier}</h1>
+            <h1>{data[index].rank}</h1>
+            <h1>{data[index].leaguePoints}</h1>
+            <h1>{data[index].wins}</h1>
+            <h1>{data[index].losses}</h1>
+            
         </div>
     );
 }

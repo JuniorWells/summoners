@@ -14,18 +14,25 @@ const Profile = () => {
 
     const apiKey = 'RGAPI-996997d7-dad1-4328-9f8c-23d3179ffe60';
     const location = useLocation();
-    const { stats } = location.state;
     const [ data, setData ] = useState(location.state.value);
+    const [ fixedData, setFixedData ] = useState(null);
  
     const handleSearchResults = async () => {
-      const userStats = await getStats(location.state.value, apiKey);
-      console.log(userStats);
-      setData(userStats);
+        const userStats = await getStats(location.state.value, apiKey);
+        setData(userStats);
+        setFixedData(userStats);
+    }
+
+    const dataCheck = () => {
+        if (fixedData === null || fixedData.length === 0 || fixedData === undefined)
+        {
+            return false;
+        }
+        return true;
     }
 
     useEffect(() => {
-      handleSearchResults();
-      console.log(`data: ${data}`);
+        handleSearchResults();
     }, [location.state.value]);
 
     return (
@@ -36,7 +43,7 @@ const Profile = () => {
           <div className='profile__search'>
             <SearchBar/>
           </div>
-          <Card data={data} />
+          {dataCheck() ? <Card data={data} /> : <h1>No results found</h1>}
           </div>
         </div>
       </>
