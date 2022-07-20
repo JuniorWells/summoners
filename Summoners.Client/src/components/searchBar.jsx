@@ -26,17 +26,17 @@ const SearchBar = () => {
 
     return (
         <div className='searchBar__wrap'>
+            <h3>Enter Summoner's Name</h3>
             <form onSubmit={formSubmit}>
             <input
                 type='text'
-                required = {true}
                 placeholder='Enter summoner name'
                 value={value}
                 onChange={e => setValue(e.target.value)}
             />
-            {value && <span onClick={clearSearch}>X</span>}
+            {value && <span onClick={clearSearch}></span>}
             <Link to="/profile">
-                <button>Go</button>
+                <button className='btn-search' onClick={clearSearch}>Search</button>
             </Link>
             </form>
         </div>

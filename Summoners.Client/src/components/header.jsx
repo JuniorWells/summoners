@@ -8,12 +8,12 @@ import { logo } from './images';
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__inner container">
                 <div className="header__logo">
                 <Link to="/">
                     <img src={logo} alt="" />
                 </Link>
                 </div>
+            <div className="header__inner">
                 <ul className="header__nav">
                     <li>   
                     <Link to="/">
