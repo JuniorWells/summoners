@@ -13,9 +13,15 @@ import yone from '../assets/images/Yone.png'
 import zeri from '../assets/images/Zeri.png'
 
 export const SliderData = [
-    { image: akali }, { image: lux }, { image: Ashe }, { image: Garen }, { image: Ahri },
-    { image: ornn }, { image: bel }, { image: jhin }, { image: nilah }, { image: yasuo }, 
-    { image: yone }, { image: zeri }
+    { image: akali }, { image: lux }, { image: Ashe }, { image: Garen }, 
+    { image: jhin },
+    { image: Ahri }, 
+    { image: ornn }, 
+    { image: zeri }, 
+    { image: nilah }, 
+    { image: bel },  
+    { image: yasuo }, 
+    { image: yone }
   ];
 
   export { logo }
