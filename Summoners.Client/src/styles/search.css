@@ -1,25 +1,33 @@
+.searchBar__wrap{
+    margin-top: 0rem;
+}
+
+.searchBar__wrap ::placeholder{
+    color: black;
+}
+
 
 .searchBar__wrap input{
 
-    border: none;
-    color: black;
+    border: solid;
     padding: 12px 20px;
     text-decoration: none;
     margin: 2px 2px;
-    width: 14rem;
+    width: 18rem;
     cursor: pointer;
+    color: black;
   }
 
 .search__contents{
-    color:white;
+    color:black;
 }
 
 .btn-search {
     font-weight: 200;
     font-size: normal;
-    color: beige;
-    background-color: rgb(172, 85, 85);
-    border: 0;
+    color: black;
+    background-color: rgb(224,182,103);
+    border: solid;
     outline: 0;
     cursor: pointer;
     padding: 12px 12px;

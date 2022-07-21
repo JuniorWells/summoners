@@ -1,40 +1,43 @@
-.background-image{
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+
+.home-background{
+    background-image: url("../assets/images/Background.png");
     background-repeat:no-repeat;
-    background-position: center;
-    height:100vh;
-    width: 100%;
-    display: flex;
-    background-blend-mode: darken;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;   
+       background-position:center;
+       background-blend-mode:darken;
+       background-size: cover;
+       background-color: rgb(143, 133, 133);
+       
+       height: 100vh;
+       width: 100%;
 }
 
 .home-container{
     width: 100%;
-    margin-top: 4rem;
+    height: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
+    padding-bottom: 2rem;
 }
 
 .home-search{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    margin-left: 8rem;
 }
 .welcome__content {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
     justify-content: center;
-    width: 60%;
-    height: 300px;
+    width: 80%;
+    height: 250px;
 }
 
 .welcome__title {
-    font-size: 1.5rem;
-    height: 180px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     font-family: monospace;
@@ -42,24 +45,27 @@
 
 .title__name{
     font-size: 4rem;
-    font-family:fantasy;
+    font-family:sans-serif;
     margin-top: 30px;
+    color: rgb(243, 241, 232);
+  text-shadow:
+    0 0 5px rgb(205, 114, 24),
+    0 0 10px rgb(224, 153, 40),
+    0 0 20px rgb(234, 169, 85),
+    0 0 40px rgb(222, 195, 42)
 }
 
-.description {
-    font-size: 1rem;
-    font-family:sans-serif;
-    height: 100px;
-}
+
+
 
 .welcome__img {
-    align-self: center;
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 2rem;
+    align-items: center;
+    padding-right: 8rem;
+    margin-right: 2rem;
+    margin-top: 6rem;
     width: 40%;
-    height: 550px;
+    height: 400px;
 }
 
 .welcome__img__slide {
@@ -67,9 +73,22 @@ display: flex;
 flex-direction: column;
 }
 
+.image{
+    animation: burn 1.5s linear infinite alternate;
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+@keyframes burn {
+    from { box-shadow: -.1em 0 .3em #fefcc9, .1em -.1em .3em #feec85, -.2em -.2em .4em #ffae34, .2em -.3em .3em #ec760c, -.2em -.4em .4em #cd4606, .1em -.5em .7em #973716, .1em -.7em .7em #451b0e; }
+    45%  { box-shadow: .1em -.2em .5em #fefcc9, .15em 0 .4em #feec85, -.1em -.25em .5em #ffae34, .15em -.45em .5em #ec760c, -.1em -.5em .6em #cd4606, 0 -.8em .6em #973716, .2em -1em .8em #451b0e; }
+    70%  { box-shadow: -.1em 0 .3em #fefcc9, .1em -.1em .3em #feec85, -.2em -.2em .6em #ffae34, .2em -.3em .4em #ec760c, -.2em -.4em .7em #cd4606, .1em -.5em .7em #973716, .1em -.7em .9em #451b0e; }
+    to   { box-shadow: -.1em -.2em .6em #fefcc9, -.15em 0 .6em #feec85, .1em -.25em .6em #ffae34, -.15em -.45em .5em #ec760c, .1em -.5em .6em #cd4606, 0 -.8em .6em #973716, -.2em -1em .8em #451b0e; }
+  }
+
 .welcome__img__slide img{
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
 
 }
 
@@ -83,32 +102,39 @@ flex-direction: column;
     align-self: center;
 }
 .home-search{
-    margin-top:10rem;
+    margin-top:12rem;
+    margin-right: 4rem;
 }
 .welcome__content{
-    width: 60%;
-    margin-left: 4rem;
+    width: 80%;
+    margin-left: 2rem;
+    padding-top: 4rem;
+}
+.searchBar__wrap{
+    margin-left: 2rem;
 }
 .welcome__img{
-    align-items: center;
-    justify-content: center;
+    align-self: center;
 }
 .welcome__img__slide img{
-    height: 400px;
-    width: 400px;
+    height: 280px;
+    width: 300px;
 
 }
     
 } 
 @media (max-width: 550px) {
     .welcome__content{
-        width: 80%;
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .home-search{
         margin-right: 1rem;
-        margin-left: 2rem;
+        margin-left: 5px;
     }
     .welcome__img__slide img{
-        height: 350px;
-        width: 350px;
+        height: 200px;
+        width: 200px;
     
     }
 }

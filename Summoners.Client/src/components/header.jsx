@@ -20,16 +20,8 @@ const Header = () => {
                     Home
                 </Link>
                 </li>
-                    <li>
-                    <Link to="/feed">
-                    Feed
-                </Link>
-                    </li>
-                    <li><Link to="/search">
-                    Search
-                </Link></li>
-                    <li><Link to="/about">
-                    AboutUs
+                    <li><Link to="/profile">
+                    Profile
                 </Link></li>
                 </ul>
             </div>

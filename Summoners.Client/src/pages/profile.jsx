@@ -41,7 +41,7 @@ const Profile = () => {
     return (
       <>
         <Header/>
-        <div className="profile-background" style={{ backgroundImage: `url(${bg2})` }}>
+        <div className="profile-background">
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>

@@ -21,6 +21,7 @@
         width: 145px;
         pointer-events: visible;
         position: fixed;
+        padding-top: 10px;
       
 }
 

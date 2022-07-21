@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import '../styles/home.css'
 
 import {
-    sliderData
+    SliderData
 } from '../components/images';
 
 const HomeSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slideLength = sliderData.length;
+    const slideLength = SliderData.length;
   
     const autoScroll = true;
     let slideInterval;
@@ -34,7 +34,7 @@ const HomeSlider = () => {
 
     return ( 
         <div className="welcome__img">
-        {sliderData.map((slide, index) => {
+        {SliderData.map((slide, index) => {
         return (
           <div
             className={index === currentSlide ? "slide current" : "slide"}
@@ -42,9 +42,11 @@ const HomeSlider = () => {
             >
             {index === currentSlide && (
               <div className="welcome__img__slide">
+
                  
                 <div className="welcome__img__content">
                 </div>
+
                 <div className='image'>
                 <img src={slide.image} alt="slide" />
                 </div>
