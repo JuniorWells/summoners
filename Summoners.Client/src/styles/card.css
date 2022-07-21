@@ -4,28 +4,25 @@ html, body {
   background: #605c4b;
   font-family: Abel, Arial, Verdana, sans-serif;
 }
-.header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .Icon {
   position: absolute;
   top: 40%;
   left: 50%;
-  width: 100px;
+  width: 75px;
   -webkit-transform: translate(-50%, -50%);
+  border-radius: 15px;
 }
 
 .card {
   width: 450px;
-  height: 200px;
+  height: 175px;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
   margin: 1.5rem;
+
 }
 
 .card h1 {
@@ -40,7 +37,8 @@ html, body {
 }
 
 .card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
+  /* background: linear-gradient(#92bCa6, #A2CCB6); */
+  background: lightgray;
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
@@ -72,16 +70,17 @@ html, body {
 }
 
 .card.green .additional .more-info h1 {
-  color: #224C36;
+  color: rgb(0, 0, 0);
 }
 
 .card .additional .coords {
-  margin: 1rem;
+  margin: 0.8rem;
   font-size: 1rem;
 }
 
 .card.green .additional .coords {
-  color: #325C46;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .card .additional .coords span + span {
@@ -100,7 +99,7 @@ html, body {
 }
 
 .card.green .additional .stats {
-  color: #325C46;
+  color: rgb(0, 0, 0);
 }
 
 .card .additional .stats > div {

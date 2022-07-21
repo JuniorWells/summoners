@@ -9,14 +9,17 @@ import Header from '../components/header';
 const Home = () => {
   return(
     <div className='home-background'>
-  <Header/>
-  <div className='home-container'>
-    <div className='home-search'>
-  <HomeText/>
-  <SearchBar/>
+      <Header/>
+      <div className='home-container'>
+        <div className='home-search'>
+          <HomeText/>
+          <SearchBar/>
+          
+        </div>
+        <HomeSlider />
+      </div>
     </div>
-  </div>
-    )
+    );
   }
   
-  export default Home
+  export default Home;

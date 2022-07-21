@@ -2,7 +2,7 @@ import Header from '../components/header';
 import '../styles/search.css';
 import '../styles/profile.css';
 import Card from '../components/card';
-import { bg2 } from '../components/images'
+import { bg2 } from '../components/images';
 import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
@@ -45,8 +45,8 @@ const Profile = () => {
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>
+            {dataCheck() ? <Card data={ data } extraData = {extraData}/> : <h1>No results found</h1>}
           </div>
-          {dataCheck() ? <Card data={ data } extraData = {extraData}/> : <h1>No results found</h1>}
           </div>
         </div>
       </>

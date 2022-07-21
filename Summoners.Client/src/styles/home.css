@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
 
 .home-background{
-    background-image: url("../assets/images/Background.png");
+    background-image: url("../assets/images/bg-3.jpg");
     background-repeat:no-repeat;
-       background-position:center;
-       background-blend-mode:darken;
-       background-size: cover;
-       background-color: rgb(143, 133, 133);
-       
-       height: 100vh;
-       width: 100%;
+    background-position:center;
+    background-blend-mode:darken;
+    background-size: cover;
+    background-color: rgb(173, 172, 172);
+    height: 100vh;
+    width: 100%;
 }
 
 .home-container{
