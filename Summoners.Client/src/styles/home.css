@@ -63,8 +63,8 @@
 
 .welcome__img {
     display: flex;
-    padding-left: 40px;
-    padding-right: 10rem;
+    padding-right: 8rem;
+    margin-right: 2rem;
     margin-top: 2rem;
     width: 40%;
     height: 550px;
@@ -77,7 +77,7 @@ flex-direction: column;
 
 .image{
     animation: burn 1.5s linear infinite alternate;
-    padding: 40px;
+    padding: 2rem;
     border-radius: 50%;
 }
 
@@ -104,34 +104,39 @@ flex-direction: column;
     align-self: center;
 }
 .home-search{
-    margin-top:10rem;
+    margin-top:12rem;
+    margin-right: 4rem;
 }
 .welcome__content{
-    width: 60%;
-    margin-left: 4rem;
+    width: 80%;
+    margin-left: 2rem;
+    padding-top: 4rem;
 }
 .searchBar__wrap{
-    margin-left: 4rem;
+    margin-left: 2rem;
 }
 .welcome__img{
     align-self: center;
 }
 .welcome__img__slide img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 
 }
     
 } 
 @media (max-width: 550px) {
     .welcome__content{
-        width: 80%;
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .home-search{
         margin-right: 1rem;
-        margin-left: 2rem;
+        margin-left: 5px;
     }
     .welcome__img__slide img{
-        height: 350px;
-        width: 350px;
+        height: 200px;
+        width: 200px;
     
     }
 }

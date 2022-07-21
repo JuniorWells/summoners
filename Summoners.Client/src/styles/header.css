@@ -15,12 +15,14 @@
         justify-content:flex-end;
         height: 100%;
         width: 100%;
+        padding-top: 20px;
     }
 
 .header__logo {
         width: 145px;
         pointer-events: visible;
         position: fixed;
+        padding-top: 10px;
       
 }
 
