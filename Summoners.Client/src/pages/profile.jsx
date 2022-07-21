@@ -7,7 +7,7 @@ import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import getStats from '../utils/utils';
+import {getStats, getLevelIcon} from '../utils/utils';
 
 
 const Profile = () => {
@@ -16,9 +16,12 @@ const Profile = () => {
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ fixedData, setFixedData ] = useState(null);
+    const [ extraData, setExtraData ] = useState(null);
  
     const handleSearchResults = async () => {
         const userStats = await getStats(location.state.value, apiKey);
+        const temp = await getLevelIcon(location.state.value, apiKey);
+        setExtraData(temp);
         setData(userStats);
         setFixedData(userStats);
     }
@@ -43,7 +46,7 @@ const Profile = () => {
           <div className='profile__search'>
             <SearchBar/>
           </div>
-          {dataCheck() ? <Card data={data} /> : <h1>No results found</h1>}
+          {dataCheck() ? <Card data={ data } extraData = {extraData}/> : <h1>No results found</h1>}
           </div>
         </div>
       </>

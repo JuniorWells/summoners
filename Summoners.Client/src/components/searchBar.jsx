@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import getStats from '../utils/utils';
+
 import { Link } from "react-router-dom";
 
 const SearchBar = () => {

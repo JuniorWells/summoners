@@ -1,13 +1,6 @@
+import {getLevelIcon} from "../utils/utils";
 
-const Card = ( { data }) => {
-
-// 1. Tier
-// 2. Rank
-// 3. Summoner Name
-// 4. League Points
-// 5. Wins
-// 6. Losses
-// 7. Win ratio 
+const Card = ( { data, extraData }) => {
 
     let index = 0;
     for (let i = 0; i < data.length; i++)
@@ -18,6 +11,7 @@ const Card = ( { data }) => {
         }
     }
 
+    const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
 
     return (
         <div>
@@ -27,6 +21,8 @@ const Card = ( { data }) => {
             <h1>{data[index].leaguePoints}</h1>
             <h1>{data[index].wins}</h1>
             <h1>{data[index].losses}</h1>
+            <h1>{extraData.summonerLevel}</h1>
+            <img src={profileIcon}></img>
             
         </div>
     );
