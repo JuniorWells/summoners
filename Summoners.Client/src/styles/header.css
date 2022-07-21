@@ -1,52 +1,75 @@
 .header {
-    height: 3.5rem;
+    height: 8rem;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
     pointer-events: none;
     display: flex;
     padding-right: 40px;
     padding-left: 40px;
-}
-
-.header__inner {
-    display: none;
+    justify-content: center;
     align-items: center;
-    justify-content:flex-end;
-    height: 100%;
-    width: 100%;
 }
 
 .header__logo {
-    width: 145px;
+    width: 200px;
     pointer-events: visible;
     position: fixed;
-    padding-top: 10px;
-      
+    left: 0;
+    padding-left: 40px;
 }
 
 .header__logo img {
     width: 100%;
 }
 
-.header__nav {
+.title__name{
+    font-size: 4rem;
+    align-self: center;
+    font-family:sans-serif;
+    color: rgb(243, 241, 232);
+    text-shadow:
+    0 0 5px rgb(205, 114, 24),
+    0 0 10px rgb(224, 153, 40),
+    0 0 20px rgb(234, 169, 85),
+    0 0 40px rgb(222, 195, 42)
+}
+
+.welcome__img {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    padding-right: 40px;
+    padding-top: 20px;
 }
 
-.header__nav li {
-    margin-left: 1rem;
-    list-style: none;
+.welcome__img__slide {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+background-color: white;
+border-radius: 50%;
+
 }
 
-.header__nav a {
-    display: inline-block;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    position: relative;
-    pointer-events: visible;
-    text-decoration: none;
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.image{
+    animation: burn 1.5s linear infinite alternate;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+@keyframes burn {
+    from { box-shadow: -.1em 0 .3em #fefcc9, .1em -.1em .3em #feec85, -.2em -.2em .4em #ffae34, .2em -.3em .3em #ec760c, -.2em -.4em .4em #cd4606, .1em -.5em .7em #973716, .1em -.7em .7em #451b0e; }
+    45%  { box-shadow: .1em -.2em .5em #fefcc9, .15em 0 .4em #feec85, -.1em -.25em .5em #ffae34, .15em -.45em .5em #ec760c, -.1em -.5em .6em #cd4606, 0 -.8em .6em #973716, .2em -1em .8em #451b0e; }
+    70%  { box-shadow: -.1em 0 .3em #fefcc9, .1em -.1em .3em #feec85, -.2em -.2em .6em #ffae34, .2em -.3em .4em #ec760c, -.2em -.4em .7em #cd4606, .1em -.5em .7em #973716, .1em -.7em .9em #451b0e; }
+    to   { box-shadow: -.1em -.2em .6em #fefcc9, -.15em 0 .6em #feec85, .1em -.25em .6em #ffae34, -.15em -.45em .5em #ec760c, .1em -.5em .6em #cd4606, 0 -.8em .6em #973716, -.2em -1em .8em #451b0e; }
+  }
+
+.welcome__img__slide img{
+    height: 100px;
+    width: 100px;
 }
