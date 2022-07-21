@@ -28,7 +28,7 @@ const getStats = async (query, apiKey) => {
 }
 
 const getLevelIcon = async (query, apiKey) => {
-    const temp = await getSummoner(query, apiKey);
+    const temp =  await getSummoner(query, apiKey);
 
     const result = {
         name: temp.name,
