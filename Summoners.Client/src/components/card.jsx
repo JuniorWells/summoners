@@ -20,7 +20,7 @@ const Card = ( { data, extraData }) => {
     const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
 
     return (
-        <div> 
+        <div className='entire-card'> 
                 <div className="center">
                 <div className="card green">
                 <div className="additional">
@@ -38,10 +38,9 @@ const Card = ( { data, extraData }) => {
                         <span>Rank:   {data[index].tier} {data[index].rank}</span>
                         <span>Summoner Level:    {extraData.summonerLevel}</span>
                     </div>
-                    {/* <div className="coords"> */}
-                        {/* <span>Summoner Level:</span> */}
-                        {/* <span>{extraData.summonerLevel}</span> */}
-                    {/* </div> */}
+                    <div className="coords">
+                        <span>LP:    {data[index].leaguePoints}</span>
+                    </div>
                     <div className="stats">
                         <div>
                         <div className="title">Wins</div>
