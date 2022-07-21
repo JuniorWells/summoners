@@ -1,9 +1,11 @@
 .searchBar__wrap{
     margin-top: 2rem;
-
-
-
 }
+
+.searchBar__wrap ::placeholder{
+    color: white;
+}
+
 
 .searchBar__wrap input{
 

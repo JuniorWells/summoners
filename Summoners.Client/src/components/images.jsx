@@ -1,7 +1,4 @@
 import logo from '../assets/images/logo.png';
-import bg1 from '../assets/images/bg-1.jpg';
-import bg2 from '../assets/images/bg-2.jpg';
-import bg3 from '../assets/images/bg-3.jpg';
 import Ashe from '../assets/images/Champion_ashe_HP.png'
 import Ahri from '../assets/images/Champion_Ahri_HP.png'
 import Garen from '../assets/images/Champion_garen_HP.png'
@@ -21,4 +18,4 @@ export const SliderData = [
     { image: yone }, { image: zeri }
   ];
 
-export { logo, bg1, bg2, bg3 }
+  export { logo }

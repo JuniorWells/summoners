@@ -7,13 +7,9 @@ import SearchBar from '../components/searchBar';
 
 import Header from '../components/header';
 
-import {
-    bg1
-} from '../components/images'
-
 const Home = () => {
   return(
-  <div className='background-image' style={{ backgroundImage: `url(${bg1})` }}>
+    <div className='home-background'>
   <Header/>
   <div className='home-container'>
     <div className='home-search'>
