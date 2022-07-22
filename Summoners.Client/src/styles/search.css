@@ -1,32 +1,68 @@
-.searchBar__wrap ::placeholder{
-    color: black;
+.searchform {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.searchBar__wrap {
+    width: 30%;
 }
 
 
-.searchBar__wrap input{
+.search__input {
+    width: 100%;
+    padding: 12px 24px;
 
-    border: solid;
-    padding: 12px 20px;
-    text-decoration: none;
-    margin: 2px 2px;
-    width: 18rem;
-    cursor: pointer;
-    color: black;
-    border-radius: 20px;
-  }
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
 
-.search__contents{
-    color:black;
+    color: rgb(227, 222, 222);
+    background-color: rgba(255, 255, 255, 0.247);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+
+    border-radius: 50px;
+    border: 1px solid rgb(227, 222, 222);
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
+.search__input::placeholder {
+        color: rgb(255, 255, 255);
+    }
+
+.search__input:hover,
+    .search__input:focus {
+        padding: 12px 0;
+        outline: 0;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-bottom: 1px solid rgb(227, 222, 222);
+        background-position: 100% center;
+        border-radius: 0px;
+    }
 .btn-search {
     font-weight: bold;
-    font-size: normal;
-    color: black;
-    background-color: rgb(224,182,103);
-    border: solid;
-    outline: 0;
-    cursor: pointer;
-    padding: 12px 18px;
-    border-radius: 20px;
+    width: 100%;
+    padding: 12px 24px;
+    margin-left: 10%;
+
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.466);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+
+    border-radius: 50px;
+    border: 1px solid rgb(227, 222, 222);
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }

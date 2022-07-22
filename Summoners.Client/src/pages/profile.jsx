@@ -44,7 +44,6 @@ const Profile = () => {
           {promiseInProgress
               ? <Loading />
               :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
-           
         </div>
       </>
     );
