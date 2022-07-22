@@ -16,57 +16,48 @@ const Card = ( { data, extraData }) => {
 
     const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
 
-    // const isDataValid = extraData.hasOwnProperty('name')
-    // if(!isDataValid){
-    //     console.log(isDataValid)
-    // return (
-    //     <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>
-
-    // )};
     return (
-
         <div className='mainCard'> 
+            <div className="card green">
+            <div className="additional">
+                <div className="user-card">
+                    <div className='IconDiv'>
+                        <img className='Icon' src={profileIcon}/>
+                    </div>
+                </div>
+                <div className="more-info">
+                <h1>{extraData.name}</h1>
+                <div className="coords">
+                    <span>Rank:   {rankedData.tier || "---"} {rankedData.rank || "---"}</span>
+                    <span>Summoner Level:    {extraData.summonerLevel}</span>
+                </div>
 
-                <div className="card green">
-                <div className="additional">
-                    <div className="user-card">
-                        <div className='IconDiv'>
-                            <img className='Icon' src={profileIcon}/>
-                        </div>
-                    </div>
-                    <div className="more-info">
-                    <h1>{extraData.name}</h1>
-                    <div className="coords">
-                        <span>Rank:   {rankedData.tier || "---"} {rankedData.rank || "---"}</span>
-                        <span>Summoner Level:    {extraData.summonerLevel}</span>
-                    </div>
+                <div className="coords">
+                    <span>LP:    {rankedData.leaguePoints || "---"}</span>
+                </div>
 
-                    <div className="coords">
-                        <span>LP:    {rankedData.leaguePoints || "---"}</span>
+                <div className="stats">
+                    <div>
+                    <div className="title">Wins</div>
+                    <i className="fa fa-trophy"></i>
+                    <div className="value">{rankedData.wins || "---"}</div>
                     </div>
-
-                    <div className="stats">
-                        <div>
-                        <div className="title">Wins</div>
-                        <i className="fa fa-trophy"></i>
-                        <div className="value">{rankedData.wins || "---"}</div>
-                        </div>
-                        <div>
-                        <div className="title">Losses</div>
-                        <i className="fa fa-gamepad"></i>
-                        <div className="value">{rankedData.losses || "---"}</div>
-                        </div>
-                        <div>
-                        <div className="title">Win Ratio</div>
-                        <i className="fa fa-group"></i>
-                        <div className="value">{ourRatio || "---"} %</div>
-                        </div>
+                    <div>
+                    <div className="title">Losses</div>
+                    <i className="fa fa-gamepad"></i>
+                    <div className="value">{rankedData.losses || "---"}</div>
                     </div>
+                    <div>
+                    <div className="title">Win Ratio</div>
+                    <i className="fa fa-group"></i>
+                    <div className="value">{ourRatio || "---"} %</div>
                     </div>
                 </div>
                 </div>
-            
             </div>
+            </div>
+            
+        </div>
     );
 }
 
