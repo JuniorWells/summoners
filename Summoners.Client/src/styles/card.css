@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
-html, body {
-  background: #605c4b;
-  font-family: Abel, Arial, Verdana, sans-serif;
+.mainCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .Icon {
@@ -23,6 +25,7 @@ html, body {
   position: relative;
   margin: 1.5rem;
 
+
 }
 
 .card h1 {
@@ -34,6 +37,8 @@ html, body {
   width: 150px;
   height: 100%;
   z-index: 2;
+  background: #605c4b;
+  font-family: Abel, Arial, Verdana, sans-serif;
 }
 
 .card.green .additional {

@@ -1,32 +1,14 @@
-// import {getLevelIcon} from "../utils/utils";
-import '../styles/card.css';
+import '../styles/post.css';
 
-const Card = ( { data, extraData }) => {
-
-    let index = 0;
-    for (let i = 0; i < data.length; i++)
-    {
-        if (data[i].queueType === "RANKED_SOLO_5x5")
-        {
-            index = i;
-        }
-    }
-
-    const wins = parseInt(data[index].wins);
-    const losses = parseInt(data[index].losses);
-    const ratio = (wins /(wins + losses)) * 100;
-    const ourRatio = Math.round(ratio * 100) / 100;
-
-    const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
+const Post = () => {
 
     return (
-        <div className='mainCard'> 
+        <div> 
+                <div className="center">
                 <div className="card green">
                 <div className="additional">
                     <div className="user-card">
-                        <div className='IconDiv'>
-                            <img className='Icon' src={profileIcon}/>
-                        </div>
+
                     </div>
                     <div className="more-info">
                     <h1>{data[index].summonerName}</h1>
@@ -34,6 +16,10 @@ const Card = ( { data, extraData }) => {
                         <span>Rank:   {data[index].tier} {data[index].rank}</span>
                         <span>Summoner Level:    {extraData.summonerLevel}</span>
                     </div>
+                    {/* <div className="coords"> */}
+                        {/* <span>Summoner Level:</span> */}
+                        {/* <span>{extraData.summonerLevel}</span> */}
+                    {/* </div> */}
                     <div className="stats">
                         <div>
                         <div className="title">Wins</div>
@@ -56,6 +42,7 @@ const Card = ( { data, extraData }) => {
                 </div>
             
             </div>
+        </div>
     );
 }
 
