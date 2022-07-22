@@ -16,11 +16,12 @@ const SearchBar = () => {
 
     return (
         <div className='searchBar__wrap'>
-            <form onSubmit={formSubmit}>
+            <form  className = 'searchform' onSubmit={formSubmit}>
             <input
                 type='text'
                 placeholder='Enter summoner name'
                 value={value}
+                className = 'search__input'
                 onChange={e => setValue(e.target.value)}
             />
             {value && <span onClick={clearSearch}></span>}

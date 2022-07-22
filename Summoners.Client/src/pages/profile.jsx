@@ -37,9 +37,9 @@ const Profile = () => {
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>
-
-           { isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>}
-          
+          </div>
+          { isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>}
+        </div>
       </>
     );
   }
