@@ -6,6 +6,8 @@ import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import { getStats, getLevelIcon } from '../utils/utils';
+import { usePromiseTracker, trackPromise } from "react-promise-tracker";
+import Loading from '../components/loading';
 
 
 const Profile = () => {
@@ -14,8 +16,11 @@ const Profile = () => {
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
+    const { promiseInProgress } = usePromiseTracker();
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
  
     const handleSearchResults = async () => {
+        await sleep(1000);
         const userStats = await getStats(location.state.value, apiKey);
         const temp = await getLevelIcon(location.state.value, apiKey);
         setExtraData(temp);
@@ -25,7 +30,7 @@ const Profile = () => {
      const isDataValid = extraData.hasOwnProperty('name')
 
     useEffect(() => {
-        handleSearchResults();
+        trackPromise(handleSearchResults());
     }, [location.state.value]);
 
     return (
@@ -36,7 +41,10 @@ const Profile = () => {
             <SearchBar/>
 
           </div>
-           { isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>}
+          {promiseInProgress
+              ? <Loading />
+              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
+           
         </div>
       </>
     );
