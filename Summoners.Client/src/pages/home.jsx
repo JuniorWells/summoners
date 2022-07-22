@@ -10,7 +10,7 @@ const Home = () => {
       <Header/>
       <div className='home-container'>
       <div className='home-search'>
-        <h3 className='search-Heading'>Please Enter Your Summoner Name to Login</h3>
+        <h2 className='search-Heading'>Please Enter Your Summoner Name to Login</h2>
       <SearchBar/>
          </div>
       </div>
