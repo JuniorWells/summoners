@@ -31,6 +31,8 @@ const Profile = () => {
 
     useEffect(() => {
         trackPromise(handleSearchResults());
+        setData({});
+        setExtraData({});
     }, [location.state.value]);
 
     return (
@@ -43,7 +45,7 @@ const Profile = () => {
           </div>
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
+              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
         </div>
       </>
     );
