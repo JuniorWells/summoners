@@ -24,8 +24,9 @@ const Card = ( { data, extraData }) => {
 
     // )};
     return (
-        <div className='entire-card'> 
-                <div className="center">
+
+        <div className='mainCard'> 
+
                 <div className="card green">
                 <div className="additional">
                     <div className="user-card">
@@ -39,9 +40,11 @@ const Card = ( { data, extraData }) => {
                         <span>Rank:   {rankedData.tier || "---"} {rankedData.rank || "---"}</span>
                         <span>Summoner Level:    {extraData.summonerLevel}</span>
                     </div>
+
                     <div className="coords">
                         <span>LP:    {rankedData.leaguePoints || "---"}</span>
                     </div>
+
                     <div className="stats">
                         <div>
                         <div className="title">Wins</div>
@@ -64,7 +67,6 @@ const Card = ( { data, extraData }) => {
                 </div>
             
             </div>
-        </div>
     );
 }
 

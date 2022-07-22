@@ -9,15 +9,21 @@
     background-blend-mode:darken;
     height: 100vh;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .profile__search{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 80%;
+    height: 30%;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 25rem;
+    justify-content: flex-end;
+}
+
+.profile__search h1{
+color: white;
 }
 

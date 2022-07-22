@@ -10,7 +10,7 @@ import {getStats, getLevelIcon} from '../utils/utils';
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-2201aa3d-a713-4b7e-8c11-5a0ebd727be0';
+    const apiKey = 'RGAPI-593c2563-4ba7-4bfe-be06-1870fd5f64bf';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
@@ -34,14 +34,12 @@ const Profile = () => {
     return (
       <>
         <Header/>
-        <div className="profile-background">
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>
+
            { isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>}
-          </div>
-          </div>
-        </div>
+          
       </>
     );
   }

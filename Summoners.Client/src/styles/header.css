@@ -1,52 +1,72 @@
 .header {
-    height: 3.5rem;
+    height: 8rem;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
     pointer-events: none;
     display: flex;
     padding-right: 40px;
     padding-left: 40px;
-}
-
-.header__inner {
-    display: none;
+    justify-content: center;
     align-items: center;
-    justify-content:flex-end;
-    height: 100%;
-    width: 100%;
 }
 
 .header__logo {
-    width: 145px;
+    width: 200px;
     pointer-events: visible;
     position: fixed;
-    padding-top: 10px;
-      
+    left: 0;
+    padding-left: 40px;
 }
 
 .header__logo img {
     width: 100%;
 }
 
-.header__nav {
+.title__name{
+    font-size: 4rem;
+    align-self: center;
+    font-family:sans-serif;
+    color: rgb(243, 241, 232);
+    text-shadow:
+    0 0 5px rgb(205, 114, 24),
+    0 0 10px rgb(224, 153, 40),
+    0 0 20px rgb(234, 169, 85),
+    0 0 40px rgb(222, 195, 42)
+}
+
+.welcome__img {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    padding-right: 20px;
+    padding-top: 25px;
 }
 
-.header__nav li {
-    margin-left: 1rem;
-    list-style: none;
+.welcome__img__slide {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+background-color: rgba(211, 211, 211, 0.444);
+background-blend-mode: darken;
+border-radius: 50%;
+
 }
 
-.header__nav a {
-    display: inline-block;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    position: relative;
-    pointer-events: visible;
-    text-decoration: none;
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.image{
+    animation: border 1.5s linear infinite alternate;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid;
+    color: rgb(193, 165, 43);
+}
+
+.welcome__img__slide img{
+    height: 100px;
+    width: 100px;
 }
