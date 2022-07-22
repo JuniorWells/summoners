@@ -5,7 +5,7 @@ import Card from '../components/card';
 import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
-import {getStats, getLevelIcon} from '../utils/utils';
+import { getStats, getLevelIcon } from '../utils/utils';
 
 
 const Profile = () => {
@@ -20,15 +20,12 @@ const Profile = () => {
         const temp = await getLevelIcon(location.state.value, apiKey);
         setExtraData(temp);
         setData(userStats);
-        
     }
 
      const isDataValid = extraData.hasOwnProperty('name')
 
     useEffect(() => {
-
         handleSearchResults();
-        
     }, [location.state.value]);
 
     return (
@@ -38,8 +35,9 @@ const Profile = () => {
           <div className='profile__search'>
             <SearchBar/>
 
+          </div>
            { isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1>"This SummonerName does not exist! Check your spelling idiot!"</h1>}
-          
+        </div>
       </>
     );
   }
