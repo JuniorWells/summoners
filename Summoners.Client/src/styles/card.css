@@ -7,6 +7,10 @@
 
 }
 
+.entire-card {
+  margin-top: 200px;
+}
+
 .Icon {
   position: absolute;
   top: 40%;
@@ -18,7 +22,7 @@
 
 .card {
   width: 450px;
-  height: 175px;
+  height: 200px;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
