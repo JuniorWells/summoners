@@ -15,7 +15,6 @@ const Header = () => {
                 </Link>
                 </div>
                 <h2 className="title__name">Summoners</h2>
-                <HomeSlider/>
             </div>
     )
 }

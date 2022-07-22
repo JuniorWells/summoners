@@ -1,5 +1,4 @@
 import Header from '../components/header';
-import '../styles/search.css';
 import '../styles/profile.css';
 import Card from '../components/card';
 import SearchBar from '../components/searchBar';
@@ -42,7 +41,6 @@ const Profile = () => {
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>
-
           </div>
           {promiseInProgress
               ? <Loading />
