@@ -2,63 +2,51 @@
 
 .mainCard{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-
-}
-
-.entire-card {
-  margin-top: 200px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 20%;
+  height: 50vh;
 }
 
 .Icon {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 5%;
+  left: 10px;
   width: 75px;
-  -webkit-transform: translate(-50%, -50%);
   border-radius: 15px;
 }
 
 .card {
-  width: 450px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  margin: 1.5rem;
-
-
 }
 
 .card h1 {
   text-align: center;
+  padding-bottom: 25px;
+  padding-left: 4rem;
+  color: white;
+  font-family: fantasy;
 }
 
 .card .additional {
   position: absolute;
-  width: 150px;
+  width: 100%;
   height: 100%;
   z-index: 2;
-  background: #605c4b;
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
 .card.green .additional {
-  /* background: linear-gradient(#92bCa6, #A2CCB6); */
-  background: lightgray;
+  background: rgba(146, 146, 146, 0.386);
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
 
-.card .additional .user-card {
-  width: 115px;
-  height: 100%;
-  position: relative;
-  float: left;
-}
 
 .card .additional .user-card .level,
 .card .additional .user-card .rank {
@@ -73,28 +61,15 @@
   white-space: nowrap;
 }
 
-
-.card .additional .more-info h1 {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.card.green .additional .more-info h1 {
-  color: rgb(0, 0, 0);
-}
-
-.card .additional .coords {
-  margin: 0.8rem;
-  font-size: 1rem;
-}
-
 .card.green .additional .coords {
-  color: rgb(0, 0, 0);
+  color: white;
   font-weight: bold;
-}
-
-.card .additional .coords span + span {
-  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  word-spacing: 5px;
 }
 
 .card .additional .stats {
@@ -109,7 +84,7 @@
 }
 
 .card.green .additional .stats {
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 .card .additional .stats > div {

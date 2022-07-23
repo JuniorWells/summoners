@@ -14,7 +14,7 @@ const Header = () => {
                     <img src={logo} alt="" />
                 </Link>
                 </div>
-                <h2 className="title__name">Summoners</h2>
+                <h2 className="title__name">SUMMONERS</h2>
             </div>
     )
 }

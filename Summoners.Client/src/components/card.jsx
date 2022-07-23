@@ -14,7 +14,7 @@ const Card = ( { data, extraData }) => {
     const ratio = (wins /(wins + losses)) * 100;
     const ourRatio = Math.round(ratio * 100) / 100;
 
-    const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
+   const profileIcon = `http://ddragon.leagueoflegends.com/cdn/12.13.1/img/profileicon/${extraData.profileIconId}.png`
 
     return (
         <div className='mainCard'> 
@@ -25,14 +25,11 @@ const Card = ( { data, extraData }) => {
                         <img className='Icon' src={profileIcon}/>
                     </div>
                 </div>
-                <div className="more-info">
                 <h1>{extraData.name}</h1>
+             
                 <div className="coords">
                     <span>Rank:   {rankedData.tier || "---"} {rankedData.rank || "---"}</span>
                     <span>Summoner Level:    {extraData.summonerLevel}</span>
-                </div>
-
-                <div className="coords">
                     <span>LP:    {rankedData.leaguePoints || "---"}</span>
                 </div>
 
@@ -57,7 +54,7 @@ const Card = ( { data, extraData }) => {
             </div>
             </div>
             
-        </div>
+      
     );
 }
 

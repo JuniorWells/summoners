@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "lol-regular";
+  src: local("lol-regular"),
+    url("./styles/lol-font.ttf") format("truetype");
+  font-weight: normal;
+}

@@ -1,18 +1,18 @@
 import Header from '../components/header';
 import '../styles/profile.css';
 import Card from '../components/card';
-import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import { getStats, getLevelIcon } from '../utils/utils';
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import Loading from '../components/loading';
 import PostList from '../components/postList';
+import SearchBar from '../components/searchBar';
 
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-a31b222f-6265-4cda-a017-e4304cddec19';
+    const apiKey = 'RGAPI-f1865497-81b1-4b46-901d-233ecf14b550';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
@@ -42,11 +42,13 @@ const Profile = () => {
           <div className='profile__search'>
             <SearchBar/>
           </div>
-          {promiseInProgress
-              ? <Loading />
-              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
-          <PostList />
+            <div className='profile__board'>
+              {promiseInProgress
+                  ? <Loading />
+                  :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>This SummonerName does not exist!</h1> }
+              <PostList extraData={ extraData } />
 
+            </div>
         </div>
       </>
     );

@@ -9,28 +9,38 @@
     background-blend-mode:darken;
     height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 
 }
 
 .profile__search{
     display: flex;
     width: 100%;
-    height: 13%;
-    align-items: flex-start;
+    height: 12%;
+    padding-right: 50px;
+    align-items: flex-end;
     justify-content: flex-end;
-    padding-right: 4rem;
 }
 
-.profile__search h1{
-color: white;
+.profile__logout button{
+    background-color: transparent;
+    color: white;
 }
 
 .error-message {
     text-align: center;
     color: white;
+}
+
+.profile__board{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
 }
 
