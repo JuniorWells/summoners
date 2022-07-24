@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SummonersContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SummonersContext") ?? throw new InvalidOperationException("Connection string 'SummonersContext' not found.")));

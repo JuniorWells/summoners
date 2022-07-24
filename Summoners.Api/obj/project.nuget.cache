@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GDXORh8G/wjduSVa9CaWJIr6UV3OhhzkseE9WIx8CyFylAu3G8yWApUcFDlncFVmrbAEXN5J0pmJzfQfv+h4Yg==",
+  "dgSpecHash": "5Wb5Bq3dUwT6PIiRGWr8wLwwS7ep2OHeASQrxLZdfy3gNtIaYfbY7RQpffVTx96LvBnGVmWYxOqqx9VpAvDFzA==",
   "success": true,
-  "projectFilePath": "/Users/saltdev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj",
+  "projectFilePath": "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj",
   "expectedPackageFiles": [
     "/Users/saltdev/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/saltdev/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
