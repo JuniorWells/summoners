@@ -1,8 +1,7 @@
 .welcome__img {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    height: 22%;
+    position: fixed;
+    right: 0;
+    top: 0;
     padding-right: 20px;
     padding-top: 25px;
 }
@@ -31,9 +30,19 @@ border-radius: 50%;
     width: 100px;
 }
 
+@media (max-width: 1000px) {
+    .welcome__img {
+     position: fixed;
+     right: 0;
+     top: 0;
+    }
+} 
+
 @media (max-width: 650px) {
     .welcome__img {
-        height: 15%;
+        height: 10%;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
     .welcome__img__slide img{
         height: 60px;
@@ -45,7 +54,7 @@ border-radius: 50%;
     .welcome__img {
         align-items: flex-end;
         justify-content: center;
-        height: 40%;
+        height: 30%;
         width: 100%;
         display: flex;
     }
