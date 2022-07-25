@@ -36,9 +36,7 @@ const getLevelIcon = async (query, apiKey) => {
         summonerLevel: temp.summonerLevel
     }
 
-
     return result;
 }
-
 
 export { getStats, getLevelIcon };
