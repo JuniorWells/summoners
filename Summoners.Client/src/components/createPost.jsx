@@ -1,4 +1,5 @@
 import { useState , useEffect } from "react";
+import '../styles/createPost.css';
 
 const CreatePost = ({ name, flag, setFlag }) => {
 
@@ -32,9 +33,9 @@ const CreatePost = ({ name, flag, setFlag }) => {
     return (
         <div className="form__post">
             <form action="" onSubmit={sendData}>
-                <input type="text" placeholder="Set a title" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
-                <input type="text" placeholder="Set a description" name="description" value={description} onChange={e => setDescription(e.target.value)}/>
-                <button>Create Post</button>
+                <input className="titleInput" type="text" placeholder="Set a title" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
+                <input className="descInput" type="text" placeholder="Set a description" name="description" value={description} onChange={e => setDescription(e.target.value)}/>
+                <button className="createButton">Create Post</button>
             </form>
         </div>
     );

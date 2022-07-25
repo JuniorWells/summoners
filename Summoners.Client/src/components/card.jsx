@@ -28,12 +28,12 @@ const Card = ( { data, extraData }) => {
                 <div className="more-info">
                 <h1>{extraData.name}</h1>
                 <div className="coords">
-                    <span>Rank:   {rankedData.tier || "---"} {rankedData.rank || "---"}</span>
-                    <span>Summoner Level:    {extraData.summonerLevel}</span>
-                </div>
-
-                <div className="coords">
-                    <span>LP:    {rankedData.leaguePoints || "---"}</span>
+                    <span className='titlespan'>Rank:</span>
+                    <span className='detailspan'>{rankedData.tier || "---"} {rankedData.rank || "---"}</span>
+                    <span className='titlespan'>Summoner Level:</span>
+                    <span className='detailspan'>{extraData.summonerLevel}</span>
+                    <span className='titlespan'>League Points:</span>
+                    <span className='detailspan'>{rankedData.leaguePoints || "---"}</span>
                 </div>
 
                 <div className="stats">
@@ -50,7 +50,7 @@ const Card = ( { data, extraData }) => {
                     <div>
                     <div className="title">Win Ratio</div>
                     <i className="fa fa-group"></i>
-                    <div className="value">{ourRatio || "---"} %</div>
+                    <div className="value">{ourRatio || "---"}%</div>
                     </div>
                 </div>
                 </div>

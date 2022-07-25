@@ -5,30 +5,36 @@
   align-items: flex-start;
   justify-content: flex-end;
   width: 20%;
-  height: 50vh;
+  height: 75vh;
+  margin-right: 5px;
 }
-
+.IconDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .Icon {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 75px;
+  margin-top: 10%;
+  top: 20px;
+  left: 20px;
+  width: 100px;
   border-radius: 15px;
 }
 
 .card {
   width: 100%;
   height: 100%;
-  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-  border-radius: 6px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
+  text-align: center;
+  
 }
 
 .card h1 {
   text-align: center;
-  padding-bottom: 25px;
-  padding-left: 5rem;
+  font-size: xx-large;
+  color: white;
   font-family: fantasy;
 }
 
@@ -37,13 +43,16 @@
   width: 150px;
   height: 100%;
   z-index: 2;
-  background: #605c4b;
+  /* background: #605c4b; */
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
 .card.green .additional {
   /* background: linear-gradient(#92bCa6, #A2CCB6); */
-  background: lightgray;
+  border: 1px rgb(119, 119, 119);
+  border-style: solid;
+  box-shadow: 1px 1px 50px 20px rgb(119, 119, 119) inset;
+  border-radius: 30px;
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
@@ -62,14 +71,20 @@
 }
 
 .card.green .additional .coords {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: larger;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   height: 70px;
   word-spacing: 5px;
+}
+.titlespan {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.detailspan {
+  margin-bottom: 25px;
 }
 
 .card .additional .stats {
@@ -84,7 +99,7 @@
 }
 
 .card.green .additional .stats {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .card .additional .stats > div {
