@@ -1,5 +1,4 @@
 import Header from '../components/header';
-import '../styles/search.css';
 import '../styles/profile.css';
 import Card from '../components/card';
 import SearchBar from '../components/searchBar';
@@ -13,7 +12,7 @@ import PostList from '../components/postList';
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-a31b222f-6265-4cda-a017-e4304cddec19';
+    const apiKey = 'RGAPI-485f3b0a-4c8d-4681-8fe1-4896ae22f0c0';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
@@ -42,7 +41,6 @@ const Profile = () => {
         <div className='profile-wrapper'>
           <div className='profile__search'>
             <SearchBar/>
-
           </div>
           {promiseInProgress
               ? <Loading />

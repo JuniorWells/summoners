@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import HomeSlider from '../components/homeSlider';
 
 import '../styles/header.css';
 
@@ -15,7 +14,6 @@ const Header = () => {
                 </Link>
                 </div>
                 <h2 className="title__name">Summoners</h2>
-                <HomeSlider/>
             </div>
     )
 }

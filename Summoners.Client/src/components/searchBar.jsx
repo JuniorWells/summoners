@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../styles/search.css";
 
 import { Link } from "react-router-dom";
 
