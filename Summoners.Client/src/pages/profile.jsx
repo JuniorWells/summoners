@@ -13,7 +13,7 @@ import PostList from '../components/postList';
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-593c2563-4ba7-4bfe-be06-1870fd5f64bf';
+    const apiKey = 'RGAPI-a31b222f-6265-4cda-a017-e4304cddec19';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
