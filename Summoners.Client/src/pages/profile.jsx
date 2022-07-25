@@ -47,8 +47,8 @@ const Profile = () => {
           </div> */}
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <ErrorMessage/> }
-          <PostList postList={ posts }/>
+              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <PostList postList={ posts }/> </>: <ErrorMessage/> }
+              
 
         </div>
       </>
