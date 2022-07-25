@@ -7,7 +7,7 @@ const PostList = ( {postList} ) => {
             <div className="postList">
                 {postList.map((item) => {
                     return (
-                        <Post key={item.postId} postId={item.postId} title={item.title} description={item.description} />
+                        <Post key={item.postId} postId={item.postId} title={item.title} description={item.description} summonerName = "Unnerfed"/>
                     )
                 })}
                 {/* <h1>Posts</h1> */}
