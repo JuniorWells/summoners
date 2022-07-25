@@ -8,7 +8,7 @@ import { getStats, getLevelIcon } from '../utils/utils';
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import Loading from '../components/loading';
 import PostList from '../components/postList';
-
+import ErrorMessage from '../components/errorMessage';
 
 const Profile = () => {
 
@@ -39,13 +39,12 @@ const Profile = () => {
       <>
         <Header/>
         <div className='profile-wrapper'>
-          <div className='profile__search'>
+          {/* <div className='profile__search'>
             <SearchBar/>
-          </div>
+          </div> */}
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
-          <PostList />
+              :  isDataValid ? <Card data={ data } extraData={ extraData } /> && <PostList /> : <ErrorMessage/> }
 
         </div>
       </>
