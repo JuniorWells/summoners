@@ -1,0 +1,39 @@
+.titleInput {
+    padding: 12px ;
+    color: black;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border: 1px solid rgb(227, 222, 222);
+    background-position: 100% center;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.titleInput::placeholder {
+    color: rgb(255, 255, 255);
+}
+.descInput {
+    padding: 12px ;
+    color: black;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border: 1px solid rgb(227, 222, 222);
+    background-position: 100% center;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.descInput::placeholder {
+    color: rgb(255, 255, 255);
+}
+.createButton {
+    padding: 12px ;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.358);
+    border: 1px solid transparent;
+    border: 1px solid rgb(227, 222, 222);
+    background-position: 100% center;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

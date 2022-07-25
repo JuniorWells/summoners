@@ -4,6 +4,11 @@
     align-items: flex-start;
     justify-content: flex-end;
     overflow-y: auto;
+    border: 1px rgba(107, 107, 107, 0.647);
+    border-style: solid;
+    box-shadow: 1px 1px 50px 20px rgb(119, 119, 119) inset;
+    border-radius: 30px;
+
 }
 .postList {
     text-align: center;
@@ -12,7 +17,6 @@
     align-items: center;
     justify-content: flex-start;
     color: black;
-    background-color: rgba(211, 211, 211, 0.487);
     width: 98%;
     height: 75vh;
     padding-left: 10px;
