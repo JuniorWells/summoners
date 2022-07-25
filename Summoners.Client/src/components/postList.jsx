@@ -1,8 +1,6 @@
 import '../styles/postList.css';
 import CreatePost from './createPost';
 import Post from './post';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const PostList = ( {postList, name, flag, setFlag} ) => {
 
@@ -12,10 +10,16 @@ const PostList = ( {postList, name, flag, setFlag} ) => {
                 <CreatePost name={name} flag={flag} setFlag={setFlag} />
                 {postList.map((item) => {
                     return (
-                        <Post key={item.postId} postId={item.postId} title={item.title} description={item.description} summonerName = "Unnerfed"/>
+                        <Post   
+                            key={item.postId} 
+                            postId={item.postId} 
+                            title={item.title} 
+                            description={item.description} 
+                            flag={flag}
+                            setFlag={setFlag}
+                        />
                     )
                 })}
-                {/* <h1>Posts</h1> */}
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ const CreatePost = ({ name, flag, setFlag }) => {
     }
 
     return (
-        <div>
+        <div className="form__post">
             <form action="" onSubmit={sendData}>
                 <input type="text" placeholder="Set a title" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
                 <input type="text" placeholder="Set a description" name="description" value={description} onChange={e => setDescription(e.target.value)}/>
