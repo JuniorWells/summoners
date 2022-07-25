@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import { getStats, getLevelIcon } from '../utils/utils';
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
+import getPosts from '../utils/postsApi';
 import Loading from '../components/loading';
 import PostList from '../components/postList';
 
@@ -17,6 +18,7 @@ const Profile = () => {
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
     const { promiseInProgress } = usePromiseTracker();
+    const [ posts, setPosts ] = useState([]);
     const sleep = ms => new Promise(r => setTimeout(r, ms));
  
     const handleSearchResults = async () => {
@@ -25,6 +27,7 @@ const Profile = () => {
         const temp = await getLevelIcon(location.state.value, apiKey);
         setExtraData(temp);
         setData(userStats);
+        setPosts(await getPosts(location.state.value));
     }
 
      const isDataValid = extraData.hasOwnProperty('name')
@@ -45,7 +48,7 @@ const Profile = () => {
           {promiseInProgress
               ? <Loading />
               :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
-          <PostList />
+          <PostList postList={ posts }/>
 
         </div>
       </>
