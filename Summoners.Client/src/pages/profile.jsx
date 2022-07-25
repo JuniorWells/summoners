@@ -20,10 +20,11 @@ const Profile = () => {
     const [ extraData, setExtraData ] = useState({});
     const { promiseInProgress } = usePromiseTracker();
     const [ posts, setPosts ] = useState([]);
+    const [flag, setFlag] = useState([false]);
     const sleep = ms => new Promise(r => setTimeout(r, ms));
  
     const handleSearchResults = async () => {
-        await sleep(1000);
+        await sleep(700);
         const userStats = await getStats(location.state.value, apiKey);
         const temp = await getLevelIcon(location.state.value, apiKey);
         setExtraData(temp);
@@ -31,13 +32,13 @@ const Profile = () => {
         setPosts(await getPosts(location.state.value));
     }
 
-     const isDataValid = extraData.hasOwnProperty('name')
+    const isDataValid = extraData.hasOwnProperty('name')
 
     useEffect(() => {
         trackPromise(handleSearchResults());
         setData({});
         setExtraData({});
-    }, [location.state.value]);
+    }, [location.state.value, flag]);
 
     return (
       <>
@@ -49,7 +50,12 @@ const Profile = () => {
           <div className='profile__board'>
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <PostList postList={ posts } name={location.state.value}/> </>: <ErrorMessage/> }
+              :  isDataValid ? 
+              <>
+                <Card data={ data } extraData={ extraData } /> 
+                <PostList postList={ posts } name={location.state.value} flag={flag} setFlag={setFlag}/> 
+              </>
+              : <ErrorMessage/> }
           </div>
 
         </div>

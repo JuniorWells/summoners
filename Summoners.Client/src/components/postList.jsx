@@ -4,15 +4,7 @@ import Post from './post';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const PostList = ( {postList, name} ) => {
-
-    const [flag, setFlag] = useState([false]);
-
-    useEffect(() => {
-        
-    }, [flag]);
-
-
+const PostList = ( {postList, name, flag, setFlag} ) => {
 
     return (
         <div className="postList__wrapper">
