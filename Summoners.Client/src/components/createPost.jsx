@@ -27,7 +27,6 @@ const CreatePost = ({ name, flag, setFlag }) => {
         setTitle('');
         setDescription('');
         setFlag([!flag]);
-        // setSuccessMessage('Movie successfully added !')
     }
 
     return (

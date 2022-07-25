@@ -1,8 +1,14 @@
 import '../styles/post.css'
 import LOLBackground from '../assets/images/league-of-legends.jpg';
 import LOLBackgroundALT from '../assets/images/League-Jinx.jpg';
+import CreateComment from './createComment';
+import CommentList from './commentList';
+import { useState, useEffect } from 'react';
+import { getComments } from '../utils/postsApi';
 
 const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
+
+    const [comments, setComments] = useState([]);
 
     const handleDelete = async (e) => {
         e.preventDefault();
@@ -12,11 +18,14 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
             method: 'DELETE',
             mode: 'cors',
             headers: myHeaders,
-            // body: body,
             redirect: 'follow'
         };
         const response = await fetch(`https://localhost:7261/api/Post/${postId}`, requestOptions);
         setFlag(!flag);
+    }
+
+    const handleComments = async () => {
+        setComments(await getComments(postId));
     }
 
     return (
@@ -40,7 +49,11 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
                 <p className="postcard__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptate fuga ipsam aperiam nisi a non saepe et hic. Dolore sunt dolorum, itaque consequuntur distinctio dolor numquam ex. Expedita, fuga. </p>
             </div>
             </a>
-            
+            <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
+            <CommentList commentList={comments} />
+            <div>
+                <button onClick={handleComments}>See comments</button>
+            </div>
         </div>
     );
 };
