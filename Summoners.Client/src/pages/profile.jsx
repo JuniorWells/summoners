@@ -10,6 +10,7 @@ import getPosts from '../utils/postsApi';
 import Loading from '../components/loading';
 import PostList from '../components/postList';
 import ErrorMessage from '../components/errorMessage';
+import Post from '../components/post';
 
 const Profile = () => {
 
