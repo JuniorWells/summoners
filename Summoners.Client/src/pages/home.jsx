@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/home.css'
-import SearchBar from '../components/homeSearch';
+import SearchBar from '../components/searchBar';
 import Header from '../components/header';
 import HomeSlider from "../components/homeSlider";
 import "../styles/homeSlider.css";

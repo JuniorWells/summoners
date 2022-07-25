@@ -1,7 +1,7 @@
 import Header from '../components/header';
 import '../styles/profile.css';
 import Card from '../components/card';
-import SearchBar from '../components/profileSearch';
+import SearchBar from '../components/searchBar';
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import { getStats, getLevelIcon } from '../utils/utils';
