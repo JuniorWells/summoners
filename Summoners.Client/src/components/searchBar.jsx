@@ -5,7 +5,6 @@ import "../styles/search.css";
 import { Link } from "react-router-dom";
 
 const SearchBar = () => {
-        
     const [value, setValue] = useState('');
 
     const formSubmit = (e) => {
