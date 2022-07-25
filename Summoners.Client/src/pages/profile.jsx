@@ -42,7 +42,7 @@ const Profile = () => {
       <>
         <Header/>
         <div className='profile-wrapper'>
-          {/* <div className='profile__search'>
+          <div className='profile__search'>
             <SearchBar/>
           </div>
           <div className='profile__board'>
