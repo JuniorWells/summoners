@@ -10,6 +10,7 @@ import getPosts from '../utils/postsApi';
 import Loading from '../components/loading';
 import PostList from '../components/postList';
 import ErrorMessage from '../components/errorMessage';
+import Post from '../components/post';
 
 const Profile = () => {
 
@@ -48,7 +49,7 @@ const Profile = () => {
           <div className='profile__board'>
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <PostList postList={ posts }/> </>: <ErrorMessage/> }
+              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <Post/> </>: <ErrorMessage/> }
           </div>
 
         </div>

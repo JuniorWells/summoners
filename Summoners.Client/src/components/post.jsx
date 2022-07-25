@@ -20,7 +20,7 @@ const Post = ({ postId, title, description, summonerName }) => {
                     {/* <span class="card__status">1 hour ago</span> */}
                 </div>
                 </div>
-                <p class="postcard__description">Comments</p>
+                <p class="postcard__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptate fuga ipsam aperiam nisi a non saepe et hic. Dolore sunt dolorum, itaque consequuntur distinctio dolor numquam ex. Expedita, fuga. </p>
             </div>
             </a>
             
