@@ -44,11 +44,12 @@ const Profile = () => {
         <div className='profile-wrapper'>
           {/* <div className='profile__search'>
             <SearchBar/>
-          </div> */}
+          </div>
+          <div className='profile__board'>
           {promiseInProgress
               ? <Loading />
               :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <PostList postList={ posts }/> </>: <ErrorMessage/> }
-              
+          </div>
 
         </div>
       </>
