@@ -1,16 +1,21 @@
 .postList__wrapper {
-    width:100%;
+    width:65%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    overflow-y: auto;
 }
 .postList {
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: black;
     background-color: rgba(211, 211, 211, 0.487);
-    width: 50%;
-    height: 40vh;
+    width: 98%;
+    height: 75vh;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
 }

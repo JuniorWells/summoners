@@ -1,7 +1,7 @@
 import Header from '../components/header';
 import '../styles/profile.css';
 import Card from '../components/card';
-import SearchBar from '../components/searchBar';
+import SearchBar from '../components/profileSearch';
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import { getStats, getLevelIcon } from '../utils/utils';
@@ -42,11 +42,12 @@ const Profile = () => {
           <div className='profile__search'>
             <SearchBar/>
           </div>
+          <div className='profile__board'>
           {promiseInProgress
               ? <Loading />
               :  isDataValid ? <Card data={ data } extraData={ extraData } /> : <h1 className='error-message'>"This SummonerName does not exist! Check your spelling idiot!"</h1> }
           <PostList />
-
+          </div>
         </div>
       </>
     );
