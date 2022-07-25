@@ -49,7 +49,7 @@ const Profile = () => {
           <div className='profile__board'>
           {promiseInProgress
               ? <Loading />
-              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <Post/> </>: <ErrorMessage/> }
+              :  isDataValid ? <><Card data={ data } extraData={ extraData } /> <PostList postList={ posts } name={location.state.value}/> </>: <ErrorMessage/> }
           </div>
 
         </div>
