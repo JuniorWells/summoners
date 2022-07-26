@@ -164,6 +164,11 @@
   word-wrap:normal;
 }
 
+.comment p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .create_comment {
   margin-top: 10px;
 }
