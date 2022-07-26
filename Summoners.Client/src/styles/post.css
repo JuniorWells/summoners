@@ -5,10 +5,10 @@
   margin: 0;
 } */
 
-html {
+/* html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-}
+} */
 
 /* body {
   height: 100vh;
@@ -29,7 +29,6 @@ html {
   position: relative;
 }
 
-
 .container_copy {
   padding: 6rem 4rem 5rem 4rem;
 }
@@ -49,7 +48,7 @@ html {
   justify-content: center;
 }
 
-img {
+.post__img {
   height: 8.3rem;
   width: 8.3rem;
   position: relative;
@@ -58,20 +57,20 @@ img {
   z-index: 1;
 }
 
-h3 {
+.container_copy h3 {
   margin: 0 0 0.5rem 0;
   color: #999;
   font-size: 1.25rem;
 }
 
-h1 {
+.container_copy h1 {
   margin: 0 0 1rem 0;
   font-size: 2.5rem;
   letter-spacing: 0.5px;
   color: #333;
 }
 
-p {
+.container_copy p {
   margin: 0 0 4.5rem 0;
   font-size: 1.5rem;
   line-height: 1.45;

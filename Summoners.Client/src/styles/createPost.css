@@ -1,6 +1,7 @@
 .form__post {
     position: fixed;
     margin-top: 1%;
+    z-index: 99;
 }
 
 .titleInput {

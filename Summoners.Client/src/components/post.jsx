@@ -33,9 +33,9 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
             <div>
                 <button onClick={handleDelete}>X</button>
             </div>
-            <div class="blog_post">
-                <div class="img_pod">
-                    <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" />
+            <div className="blog_post">
+                <div className="img_pod">
+                    <img className="post__img"src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" />
                 </div>
                 <div class="container_copy">
                     <h3>{summonerName}</h3>
