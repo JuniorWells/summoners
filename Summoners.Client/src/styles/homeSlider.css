@@ -31,6 +31,7 @@ border-radius: 50%;
     filter: brightness(120%);
     filter: contrast(120%);
     filter: drop-shadow(3px 40px 5px black);
+
 }
 
 .welcome__img__slide img{

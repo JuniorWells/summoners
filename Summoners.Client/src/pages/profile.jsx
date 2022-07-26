@@ -14,7 +14,7 @@ import Post from '../components/post';
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-485f3b0a-4c8d-4681-8fe1-4896ae22f0c0';
+    const apiKey = 'RGAPI-aecaee5e-8b9a-4378-8436-f332568ee258';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
@@ -45,7 +45,7 @@ const Profile = () => {
         <Header/>
         <div className='profile-wrapper'>
           <div className='profile__search'>
-            <SearchBar/>
+            <SearchBar keyName={'Search'}/>
           </div>
           <div className='profile__board'>
           {promiseInProgress

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(241, 236, 214);
 }
 
 code {
@@ -12,9 +13,9 @@ code {
     monospace;
 }
 
-/* @font-face {
+@font-face {
   font-family: "lol-regular";
   src: local("lol-regular"),
     url("./styles/lol-font.ttf") format("truetype");
   font-weight: normal;
-} */
+}

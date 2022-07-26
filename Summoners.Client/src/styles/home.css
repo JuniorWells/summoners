@@ -28,14 +28,16 @@
     width: 100%;
 }
 .search-Heading{
-    color: white;
+    /* color: white;
+     */
+     color: rgb(241, 236, 214);
     text-shadow:
     0 0 5px rgb(176, 176, 176),
     0 0 10px rgb(42, 42, 42),
     0 0 20px rgb(195, 194, 193),
     0 0 40px rgb(204, 204, 204);
     font-size: 30px;
-    font-family: 'Shojumaru', cursive;
+    font-family: 'lol-regular', cursive;
     padding-bottom: 20px;
 }
 

@@ -12,8 +12,8 @@ const Home = () => {
       <HomeSlider/>
       <div className='home-container'>
       <div className='home-search'>
-        <h2 className='search-Heading'>Please Enter A Summoner Name to Search</h2>
-      <SearchBar/>
+        <h2 className='search-Heading'>Login with your Riot ID</h2>
+      <SearchBar keyName={<img src='https://i.imgur.com/bI6DHNf.png' width='30' height='30'/>}/>
          </div>
       </div>
     </div>

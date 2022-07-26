@@ -28,9 +28,15 @@
     align-self: center;
     font-family:lol-regular;
     color: rgb(241, 236, 214);
+    /* color: white; */
     text-shadow:
     0 0 5px rgb(205, 114, 24),
     0 0 10px rgb(224, 153, 40),
     0 0 20px rgb(234, 169, 85),
     0 0 40px rgb(222, 195, 42)
+    /* text-shadow:
+    0 0 5px rgb(176, 176, 176),
+    0 0 10px rgb(42, 42, 42),
+    0 0 20px rgb(195, 194, 193),
+    0 0 40px rgb(204, 204, 204); */
 }
