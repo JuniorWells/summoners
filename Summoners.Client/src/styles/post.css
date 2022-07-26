@@ -91,22 +91,18 @@
 .img_pod {
   height: 110px;
   width: 110px;
-  z-index: 10;
-  border-radius: 100%;
   position: absolute;
-  left: -10%;
-  top: -13%;
+  left: -8%;
+  top: -10%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .post__img {
-  height: 5.3rem;
-  width: 5.3rem;
+  height: 60%;
+  width: 60%;
   position: relative;
-  border-radius: 100%;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
