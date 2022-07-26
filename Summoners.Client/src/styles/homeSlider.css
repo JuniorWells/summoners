@@ -50,11 +50,25 @@ border-radius: 50%;
     }
 } 
 
+@media (max-width: 1000px) {
+    .welcome__img {
+        align-items: flex-end;
+        justify-content: center;
+        height: 35%;
+        width: 100%;
+        display: flex;
+    }
+    .welcome__img__slide img{
+        height: 180px;
+        width: 180px;
+    }
+}
+
 @media (max-width: 450px) {
     .welcome__img {
         align-items: flex-end;
         justify-content: center;
-        height: 30%;
+        height: 40%;
         width: 100%;
         display: flex;
     }
