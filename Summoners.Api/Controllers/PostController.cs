@@ -72,7 +72,9 @@ namespace Summoners.Api.Controllers
                 return NotFound();
             }
 
-            var comments =  await _context.Comments.ToListAsync();
+            var comments =  await _context.Comments
+                .Where(p => p.PostId == id)
+                .ToListAsync();
 
             var commentDTO = new List<CommentDTO>();
 

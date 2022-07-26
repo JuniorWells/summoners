@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/salt-dev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj": {}
+    "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj": {}
   },
   "projects": {
-    "/Users/salt-dev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj": {
+    "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/salt-dev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj",
+        "projectUniqueName": "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj",
         "projectName": "Summoners.Api",
-        "projectPath": "/Users/salt-dev/Desktop/summoners/Summoners.Api/Summoners.Api.csproj",
-        "packagesPath": "/Users/salt-dev/.nuget/packages/",
-        "outputPath": "/Users/salt-dev/Desktop/summoners/Summoners.Api/obj/",
+        "projectPath": "/Users/saltdev/salt/summoners/Summoners.Api/Summoners.Api.csproj",
+        "packagesPath": "/Users/saltdev/.nuget/packages/",
+        "outputPath": "/Users/saltdev/salt/summoners/Summoners.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/salt-dev/.nuget/NuGet/NuGet.Config"
+          "/Users/saltdev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

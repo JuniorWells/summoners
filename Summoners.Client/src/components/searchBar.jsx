@@ -4,7 +4,7 @@ import "../styles/search.css";
 
 import { Link } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar = ({keyName}) => {
     const [value, setValue] = useState('');
 
     const formSubmit = (e) => {
@@ -27,7 +27,7 @@ const SearchBar = () => {
             />
             {value && <span onClick={clearSearch}></span>}
             <Link to="/profile" state={{ value }}>
-                <button className='btn-search' onClick={clearSearch}>Search</button>
+                <button className='btn-search' onClick={clearSearch}>{keyName}</button>
             </Link>
             </form>
         </div>
