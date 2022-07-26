@@ -21,8 +21,82 @@
   background: linear-gradient(to right, #2b32b2, #1488cc);
 } */
 
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+.noselect {
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: red;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #e62222;
+}
+
+.noselect, .noselect span {
+	transition: 200ms;
+}
+
+.noselect .text {
+	transform: translateX(5px);
+	color: white;
+	font-weight: bold;
+  font-size: 10px;
+}
+
+.noselect .icon {
+	position: absolute;
+	border-left: 1px solid #c41b1b;
+	transform: translateX(40px);
+	height: 10px;
+	width: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.noselect svg {
+	width: 15px;
+	fill: #eee;
+}
+
+.noselect:hover {
+	background: #ff3636;
+}
+
+.noselect:hover .text {
+	color: transparent;
+}
+
+.noselect:hover .icon {
+	width: 150px;
+	border-left: transparent;
+	transform: translateX(-50px);
+}
+
+.noselect:focus {
+	outline: none;
+}
+
+
+
+
+
 .postdiv {
   width: 80%;
+  margin-bottom: 9%;
 }
 
 .blog_post {
@@ -34,6 +108,7 @@
 
 .container_copy {
   padding: 1rem 2rem 1rem 2rem;
+  min-height: 250px;
 }
 
 .img_pod {
@@ -62,29 +137,37 @@
 }
 
 .container_copy h3 {
-  margin: 0 0 0.5rem 0;
+  /* margin: 0 0 0.5rem 0; */
   color: #999;
   font-size: 1.25rem;
 }
 
 .container_copy h1 {
-  margin: 0 0 1rem 0;
+  /* margin: 0 0 1rem 0; */
   font-size: 2.5rem;
   letter-spacing: 0.5px;
   color: #333;
 }
 
 .container_copy p {
-  margin: 0 0 4.5rem 0;
+  /* margin: 0 0 4.5rem 0; */
   font-size: 1.5rem;
   line-height: 1.45;
   color: #333;
 }
 
-.delete__button {
+.noselect {
   position: absolute;
   top: 1%;
   right: 1%;
+}
+
+.comment__button {
+  /* position: absolute; */
+  margin-bottom: 10px;
+  left: 45px;
+  right: 45px;
+
 }
 
 /* .btn_primary {
