@@ -7,6 +7,11 @@
   width: 20%;
   height: 75vh;
   margin-right: 5px;
+  text-shadow:
+    0 0 5px rgb(102, 102, 102),
+    0 0 10px rgb(42, 42, 42),
+    0 0 20px rgb(37, 37, 37),
+    0 0 40px rgb(72, 61, 61);
 }
 .IconDiv {
   display: flex;

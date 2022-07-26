@@ -9,7 +9,6 @@ import { getComments } from '../utils/postsApi';
 const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
 
     const [comments, setComments] = useState([]);
-
     const handleDelete = async (e) => {
         e.preventDefault();
         var myHeaders = new Headers();
@@ -28,6 +27,9 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
         setComments(await getComments(postId));
     }
 
+    
+    
+
     return (
         <div className='postdiv'> 
             <div className="blog_post">
@@ -38,12 +40,13 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
                 <div className="container_copy">
                     {/* <h3>myknos</h3> Add date time */}
                     <h1>{title}</h1>
-                    <p>{description}</p>
+                    <p className='post__text'>{description}</p>
                 </div>
                     <button className="comment__button" onClick={handleComments}>See comments</button>
             </div>
-            <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
             <CommentList commentList={comments} />
+            <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
+            
         </div>
     );
 };

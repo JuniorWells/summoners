@@ -1,6 +1,6 @@
 const Comment = ({author, text, id}) => {
     return (
-        <div>
+        <div className="comment">
             <p>{text}</p>
         </div>
     );
