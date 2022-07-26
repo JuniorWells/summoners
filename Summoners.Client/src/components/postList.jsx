@@ -16,7 +16,8 @@ const PostList = ( {postList, name, flag, setFlag} ) => {
                             key={item.postId} 
                             postId={item.postId} 
                             title={item.title} 
-                            description={item.description} 
+                            description={item.description}
+
                             flag={flag}
                             setFlag={setFlag}
                         />

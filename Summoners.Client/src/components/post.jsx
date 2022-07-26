@@ -30,25 +30,21 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
 
     return (
         <div className='postdiv'> 
-            <div>
-                <button onClick={handleDelete}>X</button>
-            </div>
             <div className="blog_post">
+                <button className="delete__button" onClick={handleDelete}>X</button>
                 <div className="img_pod">
                     <img className="post__img"src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" />
                 </div>
                 <div class="container_copy">
-                    <h3>{summonerName}</h3>
+                    {/* <h3>myknos</h3> Add date time */}
                     <h1>{title}</h1>
                     <p>{description}</p>
-                    <a class="btn_primary" href='#' target="_blank">Read More</a>
+                    <button onClick={handleComments}>See comments</button>
+                    {/* <a class="btn_primary" href='#' target="_blank">Read More</a> */}
                 </div>
             </div>
             <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
             <CommentList commentList={comments} />
-            <div>
-                <button onClick={handleComments}>See comments</button>
-            </div>
         </div>
     );
 };

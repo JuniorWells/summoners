@@ -21,24 +21,28 @@
   background: linear-gradient(to right, #2b32b2, #1488cc);
 } */
 
+.postdiv {
+  width: 80%;
+}
+
 .blog_post {
   background: #fff;
-  max-width: 500px;
   border-radius: 10px;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 .container_copy {
-  padding: 6rem 4rem 5rem 4rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .img_pod {
   height: 110px;
   width: 110px;
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  /* background: linear-gradient(90deg, #ff9966, #ff5e62); */
+  /* background: transparent;  */
   z-index: 10;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  /* box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3); */
   border-radius: 100%;
   position: absolute;
   left: -10%;
@@ -49,8 +53,8 @@
 }
 
 .post__img {
-  height: 8.3rem;
-  width: 8.3rem;
+  height: 5.3rem;
+  width: 5.3rem;
   position: relative;
   border-radius: 100%;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
@@ -77,7 +81,13 @@
   color: #333;
 }
 
-.btn_primary {
+.delete__button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+/* .btn_primary {
   border: none;
   outline: none;
   background: linear-gradient(90deg, #ff9966, #ff5e62);
@@ -88,9 +98,9 @@
   box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
   transition: all 0.2s ease-in;
   text-decoration: none;
-}
+} */
 
-.btn_primary:hover {
+/* .btn_primary:hover {
   box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
-}
+} */
 
