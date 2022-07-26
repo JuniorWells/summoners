@@ -27,7 +27,10 @@ const SearchBar = ({keyName}) => {
             />
             {value && <span onClick={clearSearch}></span>}
             <Link to="/profile" state={{ value }}>
-                <button className='btn-search' onClick={clearSearch}>{keyName}</button>
+                {keyName === false
+                    ? <></>
+                    : <button className='btn-search' onClick={clearSearch}>{keyName}</button>
+                }
             </Link>
             </form>
         </div>

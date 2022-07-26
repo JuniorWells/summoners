@@ -45,7 +45,7 @@ const Profile = () => {
         <Header/>
         <div className='profile-wrapper'>
           <div className='profile__search'>
-            <SearchBar keyName={'Search'}/>
+            <SearchBar keyName={false}/>
           </div>
           <div className='profile__board'>
           {promiseInProgress

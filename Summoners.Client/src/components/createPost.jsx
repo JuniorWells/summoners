@@ -13,7 +13,6 @@ const CreatePost = ({ name, flag, setFlag }) => {
         const body = JSON.stringify({
           Title: e.target["title"].value,
           Description:e.target["description"].value,
-        //   ImageUrl:e.target["imageUrl"].value
         })
         console.log(`body: ${body}`);
         const requestOptions = {
@@ -35,7 +34,7 @@ const CreatePost = ({ name, flag, setFlag }) => {
             <form action="" onSubmit={sendData}>
                 <input className="titleInput" type="text" placeholder="Set a title" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
                 <input className="descInput" type="text" placeholder="Set a description" name="description" value={description} onChange={e => setDescription(e.target.value)}/>
-                <button className="createButton">Create Post</button>
+                <button className="createButton">Post</button>
             </form>
         </div>
     );

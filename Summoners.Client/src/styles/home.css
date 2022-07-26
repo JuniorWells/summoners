@@ -28,9 +28,8 @@
     width: 100%;
 }
 .search-Heading{
-    /* color: white;
-     */
-     color: rgb(241, 236, 214);
+
+    color: rgb(241, 236, 214);
     text-shadow:
     0 0 5px rgb(176, 176, 176),
     0 0 10px rgb(42, 42, 42),

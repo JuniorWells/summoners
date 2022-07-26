@@ -33,22 +33,17 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
             <div>
                 <button onClick={handleDelete}>X</button>
             </div>
-            <a href="" className="postcard">
-            <img src={LOLBackground} className="postcard__image" alt="summoner icon" />
-            <div className="postcard__overlay">
-                <div className="postcard__header">
-                <svg className="postcard__arc" xmlns="http://www.w3.org/2000/svg">
-                    <path />
-                </svg>
-                <img className="postcard__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
-                <div className="postcard__header-text">
-                    <h3 className="postcard__title">title</h3>
-                    <span className="postcard__tagline">Summoner Name</span>
+            <div class="blog_post">
+                <div class="img_pod">
+                    <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" />
                 </div>
+                <div class="container_copy">
+                    <h3>{summonerName}</h3>
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                    <a class="btn_primary" href='#' target="_blank">Read More</a>
                 </div>
-                <p className="postcard__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptate fuga ipsam aperiam nisi a non saepe et hic. Dolore sunt dolorum, itaque consequuntur distinctio dolor numquam ex. Expedita, fuga. </p>
             </div>
-            </a>
             <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
             <CommentList commentList={comments} />
             <div>

@@ -34,7 +34,7 @@
 .card h1 {
   text-align: center;
   font-size: xx-large;
-  color: white;
+  color: rgb(241, 236, 214);
   font-family: fantasy;
 }
 
@@ -43,12 +43,10 @@
   width: 150px;
   height: 100%;
   z-index: 2;
-  /* background: #605c4b; */
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
 .card.green .additional {
-  /* background: linear-gradient(#92bCa6, #A2CCB6); */
   border: 1px rgb(119, 119, 119);
   border-style: solid;
   box-shadow: 1px 1px 50px 20px rgb(119, 119, 119) inset;
@@ -60,7 +58,7 @@
 .card .additional .user-card .level,
 .card .additional .user-card .rank {
   top: 15%;
-  color: rgb(255, 255, 255);
+  color: rgb(241, 236, 214);
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: bold;
@@ -71,7 +69,7 @@
 }
 
 .card.green .additional .coords {
-  color: rgb(255, 255, 255);
+  color: rgb(241, 236, 214);
   font-size: larger;
   display: flex;
   flex-direction: column;
@@ -95,11 +93,11 @@
   left: 1rem;
   right: 1rem;
   top: auto;
-  color: #fff;
+  color: rgb(241, 236, 214);
 }
 
 .card.green .additional .stats {
-  color: rgb(255, 255, 255);
+  color: rgb(241, 236, 214);
 }
 
 .card .additional .stats > div {

@@ -6,8 +6,8 @@ const PostList = ( {postList, name, flag, setFlag} ) => {
 
     return (
         <div className="postList__wrapper">
+            <CreatePost name={name} flag={flag} setFlag={setFlag} />
             <div className="postList">
-                <CreatePost name={name} flag={flag} setFlag={setFlag} />
                 {postList.map((item) => {
                     return (
                         <Post   
