@@ -34,3 +34,33 @@
     0 0 20px rgb(234, 169, 85),
     0 0 40px rgb(222, 195, 42)
 }
+
+@media (max-width: 1000px) {
+    .header__logo {
+        width: 160px;
+        padding-left: 20px;
+    }
+    .title__name{
+        font-size: 3rem;
+    }
+} 
+
+@media (max-width: 650px) {
+    .header__logo {
+        width: 120px;
+        padding-left: 10px;
+    }
+    .title__name{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .header{
+        justify-content: flex-end;
+    }
+    .title__name{
+        font-size: 2rem;
+    }
+}
+

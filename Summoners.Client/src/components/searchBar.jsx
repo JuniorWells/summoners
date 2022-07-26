@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import getPosts from '../utils/postsApi';
 import "../styles/search.css";
 
 import { Link } from "react-router-dom";

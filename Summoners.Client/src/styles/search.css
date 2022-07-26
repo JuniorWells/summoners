@@ -66,3 +66,29 @@
     backface-visibility: hidden;
     transform-style: preserve-3d;
 }
+
+@media (max-width: 1000px) {
+    .searchBar__wrap {
+        width: 40%;
+    }
+    .search__input {
+        padding: 8px 16px;
+    }
+    .btn-search {
+        padding: 8px 16px;
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    .searchBar__wrap {
+        width: 60%;
+    }
+}
+
+@media (max-width: 450px) {
+    .searchBar__wrap {
+        width: 70%;
+    }
+}
