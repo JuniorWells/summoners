@@ -27,10 +27,11 @@ const CreateComment = ({ postId, flag, setFlag }) => {
     }
 
     return (
-        <div>
+        <div className= "create_comment">
             <form onSubmit={handleComment}>
                 <input 
-                    placeholder="Comment.." 
+                    className= "create_comment_input"
+                    placeholder="Add Comment.." 
                     type="text" 
                     name="comment" 
                     value={comment} 

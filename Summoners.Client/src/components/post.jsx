@@ -24,10 +24,12 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
     }
 
     const handleComments = async () => {
+        setToggle(!toggle);
         setComments(await getComments(postId));
     }
 
-    
+    const [toggle, setToggle] = useState(false);
+
     
 
     return (
@@ -44,9 +46,12 @@ const Post = ({ postId, title, description, summonerName, flag, setFlag }) => {
                 </div>
                     <button className="comment__button" onClick={handleComments}>See comments</button>
             </div>
+            {toggle && 
+            <> 
             <CommentList commentList={comments} />
             <CreateComment postId={postId} flag={flag} setFlag={setFlag} />
-            
+            </>
+            }
         </div>
     );
 };
