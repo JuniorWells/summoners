@@ -14,7 +14,7 @@ import Post from '../components/post';
 
 const Profile = () => {
 
-    const apiKey = 'RGAPI-aecaee5e-8b9a-4378-8436-f332568ee258';
+    const apiKey = 'RGAPI-17c9724b-d641-48fa-b2ec-c44eaa894b2c';
     const location = useLocation();
     const [ data, setData ] = useState(location.state.value);
     const [ extraData, setExtraData ] = useState({});
