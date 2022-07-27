@@ -18,7 +18,6 @@ const SearchBar = ({keyName}) => {
     return (
         <div className='searchBar__wrap'>
             <form  className = 'searchform' onSubmit={formSubmit}>
-                
             <input
                 type='text'
                 placeholder='Enter summoner name'
@@ -26,12 +25,9 @@ const SearchBar = ({keyName}) => {
                 className = 'search__input'
                 onChange={e => setValue(e.target.value)}
             />
-            {value && <span onSubmit={clearSearch}></span>}
+            {value && <span onClick={clearSearch}></span>}
             <Link to="/profile" state={{ value }}>
-            {keyName === false
-                ? <></>
-                : <button className='btn-search' onClick={clearSearch}>{keyName}</button>
-            }
+                    <button className='btn-search' onClick={clearSearch}>{keyName}</button>
             </Link>
             </form>
         </div>

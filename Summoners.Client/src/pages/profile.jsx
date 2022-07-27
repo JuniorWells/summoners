@@ -45,7 +45,7 @@ const Profile = () => {
         <Header/>
         <div className='profile-wrapper'>
           <div className='profile__search'>
-            <SearchBar keyName={false}/>
+            <SearchBar keyName={<img src='https://i.imgur.com/bI6DHNf.png' width='30' height='30'/>}/>
           </div>
           <div className='profile__board'>
           {promiseInProgress
