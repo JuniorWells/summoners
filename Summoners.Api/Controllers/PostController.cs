@@ -39,11 +39,6 @@ namespace Summoners.Api.Controllers
         {
             var posts = await _repo.GetPostsForUser(name);
 
-            if ( posts.Count() == 0)
-            {
-                return NotFound();
-            }
-
             return Ok(posts);
         }
 
@@ -51,10 +46,6 @@ namespace Summoners.Api.Controllers
         public async Task<ActionResult<IEnumerable<CommentDTO>>> GetComments(int id)
         {
             var comments = await _repo.GetPostComments(id);
-            if (comments.Count() == 0)
-            {
-                return NotFound();
-            }
 
             return Ok(comments);
         }
