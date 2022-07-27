@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Summoners.Api.Models;
-// using Summoners.Api.Data;
+using Summoners.Api.Data;
 
 namespace Summoners.Api.Controllers
 {
@@ -14,83 +14,61 @@ namespace Summoners.Api.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
-        private readonly SummonersContext _context;
-
-        public PostController(SummonersContext context)
+        private readonly IPostRepo _repo;
+        public PostController(IPostRepo repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         // Unnecessary atm
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetAllPosts()
         {
-            if (_context.Posts == null)
+            var posts = await _repo.GetPosts();
+            if (posts.Count() == 0)
             {
                 return NotFound();
             }
 
-            return await _context.Posts.ToListAsync();
+            return Ok(posts);
         }
 
         // GET: api/Post
         [HttpGet("{name}")]
-        public async Task<ActionResult<IEnumerable<Post>>> GetPosts(string name)
+        public async Task<ActionResult<IEnumerable<PostDTO>>> GetPosts(string name)
         {
-            if (_context.Posts == null)
+            var posts = await _repo.GetPostsForUser(name);
+
+            if ( posts.Count() == 0)
             {
                 return NotFound();
             }
 
-            var user = await GetOrCreateUser(name);
-
-            var posts = await _context.Posts
-                .Where(c => c.UserId == user.Id)
-                .ToListAsync();
-
-            var postDTO = new List<PostDTO>();
-
-            foreach (var p in posts)
-            {
-                postDTO.Add(
-                    new PostDTO
-                    {
-                        PostId = p.Id,
-                        Title = p.Title,
-                        Description = p.Description
-                    });
-            }
-
-            return Ok(postDTO);
+            return Ok(posts);
         }
 
         [HttpGet("{id}/comments")]
         public async Task<ActionResult<IEnumerable<CommentDTO>>> GetComments(int id)
         {
-            if (_context.Comments == null)
+            var comments = await _repo.GetPostComments(id);
+            if (comments.Count() == 0)
             {
                 return NotFound();
             }
 
-            var comments =  await _context.Comments
-                .Where(p => p.PostId == id)
-                .ToListAsync();
+            return Ok(comments);
+        }
 
-            var commentDTO = new List<CommentDTO>();
-
-            foreach(var c in comments)
+        [HttpGet("comments/{id}")]
+        public async Task<ActionResult<Comment>> GetComment(int id)
+        {
+            var comment = await _repo.GetOneComment(id);
+            if (comment == null)
             {
-                commentDTO.Add(
-                    new CommentDTO
-                    {
-                        Text = c.Text,
-                        Author = c.Author,
-                        PostId = c.PostId
-                    }
-                );
+                return NotFound();
             }
 
-            return commentDTO;
+            return Ok(comment);
         }
 
         // POST: api/Post/{name}
@@ -98,22 +76,11 @@ namespace Summoners.Api.Controllers
         [HttpPost("{name}")]
         public async Task<ActionResult<Post>> PostPost(string name, PostDTO postDTO)
         {
-            if (_context.Posts == null)
+            var post = await _repo.CreatePost(name, postDTO);
+            if (post == null)
             {
-                return Problem("Entity set 'SummonersContext.Posts'  is null.");
+                return Problem("Post not created");
             }
-
-            var user = await GetOrCreateUser(name);
-
-            _context.Posts.Add(
-                new Post
-                {
-                    UserId = user.Id,
-                    Title = postDTO.Title,
-                    Description = postDTO.Description
-                }
-            );
-            await _context.SaveChangesAsync();
 
             return Ok();
         }
@@ -129,70 +96,45 @@ namespace Summoners.Api.Controllers
                 return BadRequest();
             }
 
-            if (!PostExists(id))
+            var comment = await _repo.CreateComment(id, commentDTO);
+            if (comment == null)
             {
                 return NotFound();
             }
-
-            _context.Comments.Add(
-                new Comment
-                {
-                    Author = commentDTO.Author,
-                    Text = commentDTO.Text,
-                    PostId = commentDTO.PostId
-                }
-            );
-
-            await _context.SaveChangesAsync();
 
             return Ok();
         }
     
         // DELETE: api/Post/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeletePost(int id)
         {
-            if (_context.Posts == null)
+            _repo.DeleteOnePost(id);
+
+            var post = await _repo.GetOnePost(id);
+
+            if (post != null)
             {
-                return NotFound();
+                return Problem("Delete action failed");
             }
-
-            var post = await _context.Posts.FindAsync(id);
-
-            if (post == null)
-            {
-                return NotFound();
-            }
-
-            _context.Posts.Remove(post);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private async Task<User> GetOrCreateUser(string summonerName)
+        [HttpDelete("comments/{id}")]
+        public async Task<IActionResult> DeleteComment(int id)
         {
-            var user = await _context.Users
-                .Where(c => c.SummonerName == summonerName)
-                .SingleOrDefaultAsync();
+            _repo.DeleteOneComment(id);
 
-            if (_context.Users.Count() == 0 || user == null)
+            var comment = await _repo.GetOneComment(id);
+
+            if (comment == null)
             {
-                var newUser = new User
-                {
-                    SummonerName = summonerName
-                };
-                _context.Users.Add(newUser);
-                await _context.SaveChangesAsync();
-                user = newUser;
+                return NoContent();
             }
 
-            return user;
+            return NoContent();
         }
 
-        private bool PostExists(int id)
-        {
-            return (_context.Posts?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
     }
 }
